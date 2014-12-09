@@ -1,0 +1,2 @@
+   PRAGMA Linker_Options("/usr/lpp/som/lib/libsomtk.a");
+   PRAGMA Linker_Options("$POWERADA/contrib/som/xsomcall.o");

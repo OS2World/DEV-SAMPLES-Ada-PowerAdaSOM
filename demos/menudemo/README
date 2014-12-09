@@ -1,0 +1,61 @@
+Ada SOM Menudemo
+----------------
+
+The files in this directory demonstrate the use of replication
+and the event manager in an Ada SOM client program.  You should
+copy them to a directory where you have write access before
+attempting to run this demo.
+
+README       - This file
+adamain.ada  - The Ada client program
+run.sh       - Runs the client program
+test.sh      - Builds and runs two copies of the client program
+testobj.c    - The server, implemented in C
+testobj.idl  - IDL for the replicated "testobj".
+
+To execute this demo in an X-Windows environment, execute test.sh.
+It will:
+
+ - Set up a SOM environment based on the setting of the POWERADA
+   environment variable
+ - Create C header files from testobj.idl to allow compilation
+   of the C server program
+ - Compile the C server program, creating an object file which
+   will be included when the Ada client is linked
+ - Create an Ada interface from testobj.idl
+ - Create an alib.list file and initialize the working sublibrary
+ - Compile and link the Ada client program
+ - Start two copies of the client program.  One will run in the
+   window where test.sh was invoked;  the other will run in another
+   aixterm window.  If the DISPLAY environment variable does not
+   indicate a valid display, you will have to establish another
+   shell to run the second the client program.  Invoke "run.sh"
+   to assure the correct environment is defined.
+
+Once each client program is running, you will be presented with a menu:
+
+========== REPLICATED OBJECT MENU ==========
+         Set the State of an Object (S)
+         Get the State of an Object (G)
+         Create a New Test Object   (N)
+         Perform RepblUnInit        (U)
+         Perform RepblInit          (I)
+         Quit Replication           (Q)
+     PLEASE ENTER YOUR SELECTION:
+
+
+One one window, enter "n", then "i".
+  (Should respond:  "Successfully initialized for replication. rc = 1")
+In the other window, enter "n", then "i".
+  (Should respond:  "Successfully initialized for replication. rc = 0")
+In either window, enter "s", then enter a string to which the value of the
+  replicated object will be set.
+Then observe that entering "g" in either window will retrieve whatever
+  value was set in the first window.
+
+This demo is based on the the sample program in 
+   /usr/lpp/som/samples/somr/c/menudemo
+or
+   /usr/lpp/somtk/samples/somr/c/menudemo
+
+Refer to that directory for additional details.  

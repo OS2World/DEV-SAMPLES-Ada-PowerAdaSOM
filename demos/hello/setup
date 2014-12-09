@@ -1,0 +1,10 @@
+. $POWERADA/tools/bin/setup_mode95
+. /usr/lpp/som/bin/somenv.sh
+export LIBPATH=$POWERADA/lib:$LIBPATH:/usr/lib
+export SMINCLUDE=$POWERADA/lib:$SMINCLUDE
+mkdir som1_demo
+cd som1_demo
+cp $POWERADA/demos/som/hello/hello* .
+cp $POWERADA/demos/som/hello/alib.list .
+cp $POWERADA/demos/som/hello/initmod.ada .
+alibinit

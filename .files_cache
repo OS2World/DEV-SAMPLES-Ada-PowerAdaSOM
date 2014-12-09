@@ -1,0 +1,11 @@
+ 10
+DIRECTORY|..|som|Directory| 1999| 5| 12|  36363.00000|May 12 10:06|FALSE| 1|
+PLAIN_TEXT|ada.efw|som|Text File| 1997| 6| 24|  19636.00000|Jun 24 1997|FALSE| 1|
+PLAIN_TEXT|adai.efw|som|Text File| 1997| 6| 24|  19637.00000|Jun 24 1997|FALSE| 1|
+OTHER_EXECUTABLE|emitada.dll|som|Executable| 1997| 6| 24|  19636.00000|Jun 24 1997|FALSE| 1|
+OTHER_EXECUTABLE|emitadai.dll|som|Executable| 1997| 6| 24|  19637.00000|Jun 24 1997|FALSE| 1|
+PLAIN_TEXT|README|som|Text File| 1997| 7| 3|  34549.00000|Jul 3 1997|FALSE| 1|
+DIRECTORY|demos|som|Directory| 1998| 5| 18|  51723.00000|May 18 1998|FALSE| 1|
+DIRECTORY|bindings|som|Directory| 1998| 5| 18|  51723.00000|May 18 1998|FALSE| 1|
+DIRECTORY|doc|som|Directory| 1998| 5| 18|  51723.00000|May 18 1998|FALSE| 1|
+DIRECTORY|html|som|Directory| 1998| 5| 18|  51724.00000|May 18 1998|FALSE| 1|

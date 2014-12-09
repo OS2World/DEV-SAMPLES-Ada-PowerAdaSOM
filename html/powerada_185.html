@@ -1,0 +1,76 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE> Known Problems</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING695>
+<A HREF="powerada_186.html">[Next]</A> <A HREF="powerada_184.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+CHAPTER 17   SOM, CORBA and IDL<P>
+<H1> Known Problems</H1>
+<HR>
+ <A NAME=MARKER2_1>This section summarizes the known problems with the generated bindings.<P>
+<A NAME=HEADING696>
+<H3> Self-referential Structs</H3>
+ Structs that include self-referential sequence type declarations do not correctly generate a forward reference for the struct type.  There is no workaround for this.<P>
+<A NAME=HEADING697>
+<H3> Parameters Homographs</H3>
+ Parameters whose type name includes a component that is a homograph of the subprogram name are not accepted by the Ada95 compiler.  This is a compiler problem.  Declare a local subtype to rename the type that is a homograph and have the parameter refer to the local subtype to workaround the problem.<P>
+<A NAME=HEADING698>
+<H3> Types declared in modules</H3>
+ Type declarations in modules that refer to declarations from interfaces nested within the module will not work because the nested interfaces are generated a separate child packages.  There is no workaround for this problem.<P>
+<A NAME=HEADING699>
+<H3> Demonstration of Known Problems</H3>
+ The following IDL specification demonstrates an example of each problem.<P>
+<PRE>
+//  
+// </B><EM>IDL specification to illustrate known problems in Ada95
+</EM>// <EM>bindings.
+</EM>//
+
+module known_problems
+{
+
+   interface first_interface
+   {
+      typedef long homograph;
+
+      typedef long another_long;
+   };
+
+   // <EM>Module with typedef that references type in nested
+</EM>   // <EM>interface.
+</EM>
+   typedef first_interface::another_long yet_another_long;
+
+   interface second_interface
+   {
+   
+     // <EM>Methods with parameter whose type name is homograph
+</EM>     // <EM>of method name.
+</EM>
+      void homograph(in first_interface::homograph p1);
+
+
+      // <EM>Structs with self-referential IDL sequence
+</EM>      // <EM>declarations.
+</EM>
+      struct self_referential_struct
+      {
+         sequence &lt;self_referential_struct&gt; self;
+      };
+
+   };
+
+};
+
+
+</PRE>
+<HR>
+<A HREF="powerada_186.html">[Next]</A> <A HREF="powerada_184.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+<P>
+<ADDRESS>Copyright 1996, OC Systems, Inc.</ADDRESS>
+<P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

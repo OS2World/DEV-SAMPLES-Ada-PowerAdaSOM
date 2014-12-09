@@ -1,0 +1,155 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE> PowerAda SOM Support </TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING692>
+<A HREF="powerada_185.html">[Next]</A> <A HREF="powerada_183.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+CHAPTER 17   SOM, CORBA and IDL<P>
+<H1> PowerAda SOM Support </H1>
+<HR>
+ <A NAME=MARKER2_1>This section describes the PowerAda SOM support.<P>
+<A NAME=HEADING693>
+<H3> IDL-to-Ada95 Language Mapping</H3>
+ The following is a summary of how IDL features are handled by the Ada95 Emitters. <P>
+ <B>Include directives</B><P>
+Fully supported.<P>
+ </B><B>Integral types (mapping deviation)</B><P>
+Types short and long are fully supported.  Unsigned (modular) types are not supported by the Ada compiler so they are mapped to signed types.<P>
+ </B><B>Floating point types</B><P>
+Both float and double types are fully supported.<P>
+ </B><B>Character type</B><P>
+Fully supported as Standard.Character.<P>
+ </B><B>Boolean type</B><P>
+Fully supported as Standard.Boolean.<P>
+ </B><B>Octet type (mapping deviation)</B><P>
+Supported as a signed 8-bit type.<P>
+ </B><B>Any type</B><P>
+Supported as record containing a Typecode and a pointer to the value.<P>
+ </B><B>Enum types</B><P>
+Fully supported as Ada enumeration types.<P>
+ </B><B>Struct types </B><P>
+Supported as Ada record types.<P>
+Self-referential structs using sequences are not supported.<P>
+ </B><B>Union types</B><P>
+Supported as Ada variant record types.<P>
+Self-referential unions using sequences are not supported.<P>
+ </B><B>Sequence types</B><P>
+Supported by instantiating a generic that provides the sequence type and operations on the sequence type.<P>
+ </B><B>String types (mapping deviation)</B><P>
+Supported as an untyped address.<P>
+ </B><B>Arrays</B><P>
+Fully supported as Ada array types.<P>
+ </B><B>Pointers</B><P>
+Supported as untyped addresses.<P>
+ </B><B>Object types (mapping deviation)</B><P>
+Supported as a tagged type wrapper to facilitate method dispatching and inheritance.  The actual object pointer value is available as a component of the tagged type and the tagged type can be created from an object pointer.  The wrapper is only used for subprogram dispatching, all other occurrences are explicit object pointers.<P>
+ </B><B>Exceptions (mapping deviation)</B><P>
+An Ada exception declaration and a record declaration (to contain exception occurrence data) are generated. <P>
+No exceptions are raised and no data is stored on method calls.<P>
+ </B><B>Interface declarations</B><P>
+Interfaces are mapped to Ada packages that contain all declarations associated with the interface.<P>
+ </B><B>Attribute declarations</B><P>
+Supported as "get" and "set" subprograms with instance data.<P>
+ </B><B>Operation declarations</B><P>
+Supported as subprogram declarations. <P>
+The "oneway" keyword has no effect.<P>
+ </B><B>Parameter declarations (mapping deviation)</B><P>
+The maximum number of supported parameters (including the target object and environment parameters) is 13.<P>
+Varargs parameters are not supported.<P>
+Environment parameters are explicitly passed and must be checked by the client. <P>
+Clients must explicitly deallocate storage for unbounded sequence out parameters, unbounded string out parameters, unbounded sequence return values, unbounded string return values, and array return values.<P>
+ </B><B>Raises expression (mapping deviation)</B><P>
+No exceptions are raised and no data is stored on method calls.<P>
+ </B><B>Context expression</B><P>
+Not supported.<P>
+ </B><B>Implementation statements</B><P>
+Most modifiers are supported (see below).  Passthru statements are not supported.  Instance variable declarations are supported.<P>
+ </B><B>Global types (mapping deviation)</B><P>
+Types declared in the global file scope but not nested in a module or interface are not generated in the binding.  References to these global types can be affected using the "typeprefix" modifier.<P>
+<A NAME=HEADING694>
+<H3> SOM Compiler Modifiers</H3>
+ <A NAME=MARKER2_2>The following is a summary of the compiler global modifiers and their status in the PowerAda Ada95 Emitters:<P>
+ </B><B>addprefixes</B><P>
+Not supported.<P>
+ </B><B>addstar</B><P>
+Not applicable.<P>
+ </B><B>comment = string</B><P>
+Supported.  Causes comments to be left out of binding file.<P>
+ </B><B>corba</B><P>
+Supported.  Allows only CORBA-compliant IDL to be processed.<P>
+ </B><B>csc</B><P>
+Not applicable.<P>
+ </B><B>emitappend</B><P>
+Supported.  Causes new bindings to be appended to old bindings if present.<P>
+ </B><B>noheader</B><P>
+Not applicable.<P>
+ </B><B>noint</B><P>
+Supported.  Suppresses warnings about "int" types in IDL.<P>
+ </B><B>nolock</B><P>
+Not applicable.<P>
+ </B><B>nopp</B><P>
+Not applicable.<P>
+ </B><B>notc</B><P>
+Not applicable.<P>
+ </B><B>nouseshort</B><P>
+Not applicable.<P>
+ </B><B>pp = preprocessor</B><P>
+    Supported.  Selects a preprocessor.<P>
+ </B><B>tcconsts</B><P>
+Not supported.<P>
+ </B><B>typeprefix = string </B><P>
+A new global modifier specifies a string to be prepended to references to global type declarations (type declarations outside of object interfaces and modules) in the Ada translation.  This prefix must be the name of an Ada package, to be withed by the binding package, that contains the appropriate type declarations.<P>
+This is a temporary workaround.<P>
+ <A NAME=MARKER2_3>The following is summary of the implementation statement modifiers and their status in PowerAda Ada95 Emitters:<P>
+ </B><B>callstyle = oidl</B><P>
+Fully supported.  Suppresses the environment and context parameters.<P>
+ </B><B>classinit = procedure</B><P>
+Not supported.<P>
+ </B><B>dllname = filename</B><P>
+Not supported. <P>
+ </B><B>filestem = stem</B><P>
+Supported.  Modifies the output filename.<P>
+ </B><B>functionprefix = prefix</B><P>
+Not supported.<P>
+ </B><B>impctx</B><P>
+Not supported.<P>
+ </B><B>indirect</B><P>
+Not supported.<P>
+ </B><B>majorversion=number</B><P>
+Supported.  Constant is declared in binding.<P>
+ </B><B>metaclass = class </B><P>
+Supported.  Specifies the metaclass for the class.<P>
+ </B><B>method</B><P>
+Supported.<P>
+ </B><B>minorversion = number</B><P>
+Supported.  Constant is declared in binding.<P>
+ </B><B>namelookup</B><P>
+Not supported.<P>
+ </B><B>nodata</B><P>
+Supported.  Suppresses generation of instance data for attribute.<P>
+ </B><B>noget</B><P>
+Supported.  Generates method stub for attribute "get" subprogram rather than automatically generating a full method.<P>
+ </B><B>nooverride</B><P>
+Supported.  Indicates method cannot be overridden in subclasses.<P>
+ </B><B>noset</B><P>
+Supported.  Generates method stub for attribute "set" subprogram rather than automatically generating a full method.<P>
+ </B><B>offset</B><P>
+   Supported.  Uses offset resolution for method lookup.<P>
+ </B><B>override</B><P>
+Supported.  Generates a stub for redefining the indicated method.<P>
+ </B><B>persistent</B><P>
+Not supported. <P>
+ </B><B>procedure</B><P>
+Not supported.<P>
+ </B><B>releaseorder: a, b, c, ...</B><P>
+Supported.  Specifies method ordering to preserve upwards compatibility.<P>
+<HR>
+<A HREF="powerada_185.html">[Next]</A> <A HREF="powerada_183.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+<P>
+<ADDRESS>Copyright 1996, OC Systems, Inc.</ADDRESS>
+<P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

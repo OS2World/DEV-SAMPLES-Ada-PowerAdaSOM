@@ -1,0 +1,372 @@
+:headerS
+/*------------------------------------------------------------------------*/
+/* adai.efw                                                               */
+/*                                                                        */
+/* This file is the template description file for the Ada Implementation  */
+/* Skeleton Emitter.                                                      */
+/*                                                                        */
+/* Change Log                                                             */
+/* ------ ---                                                             */
+/* 97Apr10 swn d3619 Generate class tables as aliased variables.          */
+/* 95Jun13 gvc Call adainit in case shared module needs elaborating d1412 */
+/* 95Jun09 gvc Don't use system.address  (d1396)                          */
+/* 95Jan06 swn Add commented somThis to method stubs.                     */
+/*             Make SCI format version 2 for better compatibility.        */
+/* 94Dec19 swn Add support for method signatures, float maps, etc.        */
+/* 94Nov22 swn Created.                                                   */
+/*                                                                        */
+/*------------------------------------------------------------------------*/
+sccs_version[] = "@(#) ada/runtime/som/adai.efw, ada, power95.3 1.8 4/10/97 18:50:22";
+
+:prologS
+
+-------------------------------------------------------------------------------
+-- Emitted on: <timeStamp>
+-- Emitted by: OC Systems SOM IDL to Ada95 Emitter.
+-------------------------------------------------------------------------------
+
+:baseIncludesS
+WITH <externalAdaName>;
+:externalIncludesS
+WITH <externalAdaName>;
+:classSpecHeaderS
+WITH <classAdaScopedName>;
+WITH Corba;
+WITH SOM;
+
+PACKAGE <classAdaScopedName>_Impl IS
+
+?   <-- classComment>
+
+   Major_Version : CONSTANT SOM.integer4 := <classMajorVersion>;
+   Minor_Version : CONSTANT SOM.integer4 := <classMinorVersion>;
+
+   FUNCTION New_Class (
+      Major_Version : IN SOM.integer4;
+      Minor_Version : IN SOM.integer4)
+      RETURN             SOM.SOMClassPtr;
+   PRAGMA export(C, New_Class, "<classCScopedName>NewClass");
+
+:classSpecTrailerS
+
+END <classAdaScopedName>_Impl; 
+
+:methodFunctionS
+
+   FUNCTION <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+      RETURN <methodAdaResultType>; 
+   PRAGMA export (C, <methodAdaName>, "<methodCScopedName>");
+?     <-- methodComment>
+:methodProcedureS
+
+   PROCEDURE <methodAdaName> (
+      <methodVisibleAdaParamList; ...>);
+   PRAGMA export (C, <methodAdaName>, "<methodCScopedName>");
+?     <-- methodComment>
+:classBodyHeaderS
+
+WITH system;
+WITH unchecked_conversion;
+
+PACKAGE BODY <classAdaScopedName>_Impl IS
+
+   <-- classComment>
+
+   FUNCTION "="(l,r : IN SOM.address) RETURN boolean RENAMES SOM."=";
+:classBodyDataHeaderS
+ 
+   -- Class data structure.
+   TYPE classData IS
+   RECORD
+      classObject : SOM.SOMAnyPtr;
+:classBodyDataMethodS
+      <methodAdaName> : SOM.somMToken;
+:classBodyDataTrailerS
+   END RECORD;
+
+   <classAdaName>ClassData : ALIASED classData;
+   PRAGMA export (C, <classAdaName>ClassData, "<classCScopedName>ClassData");
+
+:classBodyCClassDataS
+   
+   -- Auxilary class data structure.
+   <classAdaName>CClassData : ALIASED SOM.somCClassDataStructure;
+   PRAGMA export (C, <classAdaName>CClassData, "<classCScopedName>CClassData");
+
+:instanceDataHeaderS
+
+   -- Instance data structure.
+   TYPE instanceData IS
+   RECORD
+:instanceDataS
+      <dataAdaName> : <dataAdaBaseType>;
+:instanceDataNullS
+      NULL;
+:instanceDataTrailerS
+   END RECORD;
+   TYPE instanceDataPtr IS ACCESS instanceData;
+
+:methodInfoHeaderS
+
+   -- Method information.
+
+:methodInfoIdsS
+   <methodAdaName>_somMN : CONSTANT string      := "<methodName>" & ascii.nul;
+   <methodAdaName>_somNA : CONSTANT SOM.address := SOM.To_SOM_Address(<methodAdaName>_somMN'address);
+   <methodAdaName>_somId : ALIASED SOM.somId    := SOM.To_SOM_Address(<methodAdaName>_somNA'address);
+   <methodAdaName>_somMD : CONSTANT string      := "<methodDerivation>" & ascii.nul;
+   <methodAdaName>_somDA : CONSTANT SOM.address := SOM.To_SOM_Address(<methodAdaName>_somMD'address);
+   <methodAdaName>_somDI : ALIASED  SOM.somId   := SOM.To_SOM_Address(<methodAdaName>_somDA'address);
+
+:methodInfoFloatMapS
+   <methodAdaName>_FloatMap : ALIASED SOM.somFloatMap :=
+       (<methodFloatOffsets,...>);
+   <methodAdaName>_MethodInfo : ALIASED SOM.somMethodInfo :=
+       (<methodCallType>, <methodVaListSize>, <methodAdaName>_FloatMap'access);
+:methodInfoS
+   <methodAdaName>_MethodInfo : ALIASED SOM.somMethodInfo :=
+       (<methodCallType>, <methodVaListSize>, null);
+:methodInfoStubsS
+   <methodAdaName>_Stubs      : ALIASED SOM.somApRdInfo :=
+       (<methodRdStubAddress>, <methodApStubAddress>, <methodAdaName>_MethodInfo'access);
+
+:methodInfoTrailerS
+:staticMethodTableHeaderS
+
+   -- Static method table.
+   theStaticMethods : ALIASED SOM.somStaticMethod_tArray :=
+      (
+:staticMethodTableEntryS
+      (SOM.To_SOM_Address(<classAdaName>ClassData.<methodAdaName>'address),
+       <methodAdaName>_somId'access,
+       <methodAdaName>_somDI'access,
+       SOM.To_SOM_Address(<methodAdaName>'address),
+       null,
+       <methodAdaName>_Stubs'access),
+:staticMethodTableTrailerS
+      (SOM.null_address, null, null, SOM.null_address, null, null)
+      );
+
+:overrideMethodTableHeaderS
+
+   -- Override method table.
+   theOverrideMethods : ALIASED SOM.somOverrideMethod_tArray :=
+      (
+:overrideMethodTableEntryS
+      (<methodAdaName>_somId'access,
+       SOM.To_SOM_Address(<methodAdaName>'address)),
+:overrideMethodTableTrailerS
+      (null, SOM.null_address)
+      );
+
+:classIdsS
+
+   -- Class information.
+   <classAdaName>_somCN : CONSTANT string      := "<classDerivedName>" & ascii.nul;
+   <classAdaName>_somNA : CONSTANT SOM.address := SOM.To_SOM_Address(<classAdaName>_somCN'address);
+   <classAdaName>_somId : ALIASED SOM.somId    := SOM.To_SOM_Address(<classAdaName>_somNA'address);
+
+:metaClassIdsS
+
+   -- Meta class information.
+   <metaClassAdaName>_somCN : CONSTANT string      := "<metaClassDerivedName>" & ascii.nul;
+   <metaClassAdaName>_somNA : CONSTANT SOM.address := SOM.To_SOM_Address(<metaClassAdaName>_somCN'address);
+   <metaClassAdaName>_somId : ALIASED SOM.somId    := SOM.To_SOM_Address(<metaClassAdaName>_somNA'address);
+
+:parentClassInfoHeaderS
+
+   -- Parent class information.
+
+:parentClassInfoIdsS
+   <parentClassAdaName>_somCN : CONSTANT string      := "<parentClassDerivedName>" & ascii.nul;
+   <parentClassAdaName>_somNA : CONSTANT SOM.address := SOM.To_SOM_Address(<parentClassAdaName>_somCN'address);
+   <parentClassAdaName>_somId : ALIASED SOM.somId    := SOM.To_SOM_Address(<parentClassAdaName>_somNA'address);
+
+:parentClassInfoTableS
+
+   -- Parent class table.
+   theParentClassIds : ALIASED SOM.somIdArray :=
+      (<parentClassAssociations,...>);
+:parentClassInfoTrailerS
+
+:defaultParentClassInfoS
+
+   -- Parent class ids.
+
+   SOMObject_somCN : CONSTANT string      := "SOMObject" & ascii.nul;
+   SOMObject_somNA : CONSTANT SOM.address := SOM.To_SOM_Address(SOMObject_somCN'address);
+   SOMObject_somId : ALIASED SOM.somId    := SOM.To_SOM_Address(SOMObject_somNA'address);
+
+   -- Parent class table.
+   theParentClassIds : ALIASED SOM.somIdArray :=
+      (1 => SOMObject_somId);
+
+:staticClassInfoS
+
+   theStaticClassInfo : ALIASED SOM.somStaticClassInfo :=
+      (
+      layoutVersion         => 2,
+      numStaticMethods      => <numStaticMethods>,
+      numStaticOverrides    => <numStaticOverrides>,
+      numNonInternalData    => <numNonInternalData>,
+      numProcMethods        => <numProcMethods>,
+      numVarargsFuncs       => <numVaragsFuncs>,
+      majorVersion          => Major_Version,
+      minorVersion          => Minor_Version,
+      instanceDataSize      => (instanceData'size+7)/8,
+      maxMethods            => <numStaticMethods>,
+      numParents            => <numParents>,
+      classId               => <classAdaName>_somId,
+      explicitMetaId        => <explicitMetaId>,
+      implicitParentMeta    => <implicitParentMeta>,
+      parents               => theParentClassIds(theParentClassIds'first)'access,
+      cds                   => SOM.To_SOM_Address(<classAdaName>ClassData'address),
+      ccds                  => <classAdaName>CClassData'access,
+      smt                   => <staticMethodTable>,
+      omt                   => <overrideMethodTable>,
+      nitReferenceBase      => SOM.null_address,
+      nit                   => null,
+      pmt                   => <procMethodTable>,
+      vft                   => <varargsFuncTable>,
+      cif                   => SOM.null_address,
+      dataAlignment         => 4,
+      numDirectInitClasses  => -1,
+      directInitClasses     => null,
+      numMethods            => 0,
+      mt                    => null,
+      protectedDataOffset   => 0,
+      somSCIVersion         => 0,
+      numInheritedMethods   => 0,
+      imt                   => null,
+      numClassDataEntries   => <numStaticMethods>,
+      classDataEntryNames   => null,
+      numMigratedMethods    => 0,
+      mmt                   => null,
+      numInitializers       => 0,
+      initializers          => null,
+      somDTSClass           => 0,
+      dsci                  => null);
+
+:newClassHeaderS
+
+   FUNCTION New_Class (
+      Major_Version : IN SOM.integer4;
+      Minor_Version : IN SOM.integer4)
+      RETURN             SOM.SOMClassPtr
+   IS
+      PROCEDURE Adainit;
+      PRAGMA Interface(C, Adainit);
+      Dummy : SOM.SOMClassPtr;
+   BEGIN
+      Adainit;
+:newClassRequiredClassS
+      dummy := <requiredClassAdaName>.New_Class(<requiredClassAdaName>.Major_Version, <requiredClassAdaName>.Minor_Version);  
+:newClassTrailerS
+      RETURN SOM.somBuildClass(1, theStaticClassInfo, Major_Version, Minor_Version);
+   END New_Class;
+:getInstanceDataS
+
+   FUNCTION Get_InstanceData (
+      Self   : IN SOM.SOMObjectPtr)
+      RETURN      instanceDataPtr
+   IS
+      FUNCTION to_instance_data IS
+         NEW unchecked_conversion(SOM.somToken, instanceDataPtr);
+   BEGIN
+      RETURN to_instance_data(SOM.somDataResolve(Self, <classAdaName>CClassData.instanceDataToken));
+   END Get_InstanceData;
+
+:methodsPrologS
+ 
+:attributeMethodBodyFunctionS
+
+   FUNCTION <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+      RETURN <methodAdaResultType>
+   IS
+      -- Attribute method.
+?     <-- methodComment>
+      somThis : instanceDataPtr := Get_InstanceData(Self);
+   BEGIN
+      RETURN somThis.<methodAttributeAdaName>;
+   END <methodAdaName>; 
+:attributeMethodBodyProcedureS
+
+   PROCEDURE <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+   IS
+      -- Attribute method.
+?     <-- methodComment>
+      somThis : instanceDataPtr := Get_InstanceData(Self);
+   BEGIN
+      somThis.<methodAttributeAdaName> := <methodAttributeAdaName>;
+   END <methodAdaName>;
+:attributeMethodBodyFunctionProcedureS
+
+   PROCEDURE <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+   IS
+      -- Attribute method (function returning non-scalar return value).
+?     <-- methodComment>
+      somThis : instanceDataPtr := Get_InstanceData(Self);
+   BEGIN
+      <methodAdaResultReference> := somThis.<methodAttributeAdaName>;
+   END <methodAdaName>;
+:methodBodyFunctionS
+
+   FUNCTION <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+      RETURN <methodAdaResultType>
+   IS
+?     <-- methodComment>
+      <methodAdaResultReference> : <methodAdaResultType>;
+--      somThis : instanceDataPtr := Get_InstanceData(Self);
+   BEGIN
+      RETURN <methodAdaResultReference>;
+   END <methodAdaName>; 
+:methodBodyProcedureS
+
+   PROCEDURE <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+   IS
+?     <-- methodComment>
+--      somThis : instanceDataPtr := Get_InstanceData(Self);
+   BEGIN
+      NULL;
+   END <methodAdaName>;
+:overrideMethodBodyFunctionS
+
+   FUNCTION <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+      RETURN <methodAdaResultType>
+   IS
+      -- Override method.
+?     <-- methodComment>
+      <methodAdaResultReference> : <methodAdaResultType>;
+--      somThis : instanceDataPtr := Get_InstanceData(Self);
+   BEGIN
+      -- Parent call.
+      <methodAdaResultReference> := <methodOriginalClassAdaName>.<methodAdaName>(
+         <methodVisibleAdaParamNamesList,...>);
+      RETURN <methodAdaResultReference>;
+   END <methodAdaName>; 
+:overrideMethodBodyProcedureS
+
+   PROCEDURE <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+   IS
+      -- Override method.
+?     <-- methodComment>
+--      somThis : instanceDataPtr := Get_InstanceData(Self);
+   BEGIN
+      -- Parent call.
+      <methodOriginalClassAdaName>.<methodAdaName>(
+         <methodVisibleAdaParamNamesList,...>);
+   END <methodAdaName>;
+:methodsEpilogS
+
+:classBodyTrailerS
+
+END <classAdaScopedName>_Impl; 
+

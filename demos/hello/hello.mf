@@ -1,0 +1,48 @@
+# @(#) ada/runtime/som/hello.mf, som, power9x.1 1.2 6/23/95 11:14:34
+
+#-----------------------------------------------------------------------------
+# Makefile for: Hello World example.
+# 
+# Change History:
+#
+# 95Jun22 gvc Change to build Ada shared library (d1459).
+# 95Jan06 swn Created.
+#-----------------------------------------------------------------------------
+
+INCLUDEPATH = -I$(SOMBASE)/include
+LIBDIRPATH  = -L. -L$(SOMBASE)/lib
+LIBLIST     = -lsomtk
+EXPS  = hello.exp 
+
+all: libhello.a
+
+clean:
+	/bin/rm -f *.o *.h *.ih *.exp  *~ hello_client hello_client_ada libhello.a hello.dll
+
+.SUFFIXES: .ada .adai .idl .exp
+	
+.idl.exp:
+	sc -sexp $*.idl
+
+.idl.ada:
+	sc -sada $*.idl
+
+.idl.adai:
+	sc -sadai $*.idl
+
+hello.ada: hello.idl               
+hello.adai: hello.idl               
+
+#
+# Build the Hello DLL
+#
+hello.dll: hello.exp hello.adai hello.ada
+	alibinit -F
+	ada hello.ada
+	ada -S hello.adai
+	ada -sm initmod.ada -o hello.dll -i-bE:hello.exp
+
+libhello.a:  hello.dll
+	ar ruv libhello.a hello.exp
+
+

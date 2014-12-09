@@ -1,0 +1,65 @@
+#ifndef table_idl
+
+#include <replicbl.idl>
+
+interface tablet : SOMRReplicbl
+
+//  Tablet Class - the drawing area for program repdraw.c.  Based on the
+//  program xmdraw.c in the IBM AIXWindows programming guide by:
+//
+//           Ian J. Charters  IBM UK
+//           Mark Connell     IBM Australia
+//
+//  Ported to SOM and replicated for Object Technology Products, IBM Austin,
+//  by Robert Sturgis.
+
+//
+// 95Apr07 swn Modify to handle redrawing on exposure events.
+//
+
+
+{
+  void setTablet(in void *clientDA);
+  void beginLine(in long x, in long y);
+  void drawLine(in long x, in long y);
+  void clearAll();
+  void redraw();
+
+#ifdef __SOMIDL__
+
+implementation
+{
+  callstyle=oidl;
+
+  releaseorder: setTablet, beginLine, drawLine, clearAll, redraw;
+
+  // Class Modifiers
+  filestem = tablet;
+
+  passthru C_h =        "#include <X11/Intrinsic.h>"
+                        "#include <Xm/Xm.h>"
+                        "#include <Xm/DrawingA.h>";
+
+  // Internal Instance Variables
+  long  x1;
+  long  y1;
+  long  x2;
+  long  y2;
+  void  *xorGC;
+  void  *clearGC;
+  void  *copyGC;
+  void  *drawPixmap;
+  void  *drawarea;
+  short width;
+  short height;
+
+  // Method Modifiers
+  somrApplyUpdates: override;
+  somrDoDirective: override;
+  somrGetState: override;
+  somrSetState: override;
+  somInit: override;
+};
+#endif  /* __SOMIDL__ */
+};
+#endif  /* tablet_idl */

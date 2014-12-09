@@ -1,0 +1,9 @@
+ 8
+DIRECTORY|..|som/demos/meta_class|Directory| 1999| 5| 12|  36366.00000|May 12 10:06|FALSE| 1|
+PLAIN_TEXT|setup|som/demos/meta_class|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+C_SOURCE|animals.c|som/demos/meta_class|C Source| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|animals.idl|som/demos/meta_class|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|animals.mf|som/demos/meta_class|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+ADA_SOURCE|animals_client.ada|som/demos/meta_class|Ada Source| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|alib.list|som/demos/meta_class|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|README|som/demos/meta_class|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|

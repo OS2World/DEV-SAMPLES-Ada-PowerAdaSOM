@@ -1,0 +1,20 @@
+#include <somobj.idl>
+
+interface Hello : SOMObject
+// Simple interface.
+{
+
+   attribute short repeatCount;
+   // This is the number of times to print the message.
+
+   void sayHello();
+   // Print 'Hello world.' to stdout.
+
+#ifdef __SOMIDL__
+  implementation {
+    //# Class Modifiers
+    dllname = "hello.dll";
+    releaseorder : _get_repeatCount, _set_repeatCount, sayHello;
+  };
+#endif /* __SOMIDL__ */
+};

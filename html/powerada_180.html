@@ -1,0 +1,71 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE> Introduction</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING669>
+<A HREF="powerada_181.html">[Next]</A> <A HREF="powerada_179.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+CHAPTER 17   SOM, CORBA and IDL<P>
+<H1> Introduction</H1>
+<HR>
+ <A NAME=MARKER2_9><A NAME=MARKER2_6><A NAME=MARKER2_8>This section provides a brief introduction to SOM, CORBA, and IDL.  In order to build SOM tools, the IBM SOMobjects Developer Toolkit is required and must be licensed separately from PowerAda.<P>
+<A NAME=HEADING670>
+<H3> What Is SOM?</H3>
+ IBM's System Object Model (SOM) is an object-oriented technology for building, packaging, and manipulating binary class libraries, that promotes language-independent reuse of components and operating system interoperability.  SOM, together with <A NAME=MARKER2_4>Distributed SOM (DSOM) and the other SOM Frameworks, provides a broad range of object capabilities including distributed and dynamic object manipulation, persistent object manipulation, and replicated object manipulation.<P>
+ The interfaces to class libraries are defined using a programming-language-neutral interface specification language. Language-specific bindings are produced from the language-neutral specification using the IBM SOM Compiler.  The class library user and class library implementor can each choose their preferred implementation languages, which can be object-oriented or procedural, and SOM guarantees the interface between them.  SOM allows classes implemented in one language to be subclasses of classes implemented in another language.  SOM supports upwards-compatible changes to class libraries without requiring clients to recompile.  SOM class libraries can be statically bound in the same address space as the client for fast method invocation.<P>
+<A NAME=HEADING671>
+<H3> What is CORBA and IDL?</H3>
+ The <A NAME=MARKER2_5>Object Management Group (OMG) is an industry consortium formed to create industry standards for commercially available object-oriented systems.  The OMG defined a general Object Management Architecture which defines Application Objects, Common Facilities, Object Services, and an Object Request Broker (ORB) as inter-operable software components. <BR><IMG SRC="17som.frm_AFrame_11.gif"><BR>
+<P>
+ The ORB interface is specified in the <A NAME=MARKER2_6><A NAME=MARKER2_8>Common Object Request Broker Architecture (CORBA) specification which defines the Interface Definition Language (IDL), the C/C++/Smalltalk Language Mappings, the Dynamic Invocation Interface, the Interface Repository, and ORB Programming Interfaces.<BR><IMG SRC="17som.frm_AFrame_1.gif"><BR>
+<P>
+ The <A NAME=MARKER2_8>IDL language is used to define object interfaces in a language-neutral manner.  IDL describes the interfaces that clients call and object implementations provide.  IDL is declarative, describing the set of possible operations that a client may request of an object.  IDL specifications can include interface (object) declarations, constant and type declarations, attributes declarations, operation declarations, exception declarations, and module declarations.<P>
+ This is an example IDL specification for an object interface:<P>
+<PRE>
+interface Animal {
+   // This is the interface to an animal object.
+
+   enum State {SLEEPING, AWAKE};
+   // A simple indication of an animals state.
+
+   boolean eat(inout Feed bag);
+   // Requests that the animal object eat the food in the
+   // specified bag.
+   // Returns true is animal is full.
+
+   attribute State alertness;
+   // This is the current state of the animal.
+};
+</PRE>
+<A NAME=HEADING672>
+<H3> How do SOM and CORBA relate?</H3>
+ <A NAME=MARKER2_9>SOM provides a wide range of object capabilities.  Some of these capabilities include support for the CORBA specification.<P>
+ SOM provides a CORBA-compliant Object Request Broker and Interface Repository, known as DSOM.  DSOM provides transparent access to objects located in different address spaces throughout the connected network.  The IBM SOM Compiler translates IDL specifications into CORBA-compliant language bindings for objects.<BR><IMG SRC="17som.frm_AFrame_5.gif"><BR>
+<P>
+<A NAME=HEADING673>
+<H3> What are bindings?</H3>
+ The <A NAME=MARKER2_10>CORBA specification defines two language dependent bindings that will be generated from the IDL specification for an object interface: the usage stub and the implementation skeleton.  The usage stub is the programming interface used by clients to make requests of objects. The implementation skeleton is the programming interface used by the ORB to invoke the object implementation to satisfy client requests.<P>
+ The IBM SOM Compiler is used to translate IDL specifications into language-specific bindings.  PowerAda provides two Ada95 Emitters for use with the IBM SOM Compiler.  The usage stub emitter produces Ada95 bindings (package specifications and bodies) from IDL that form the Ada95 interface to the object that is called by clients.  The implementation skeleton emitter produces bindings (package specifications and bodies) that form the implementation of the object that is called by the ORB to satisfy requests.<BR><IMG SRC="17som.frm_AFrame_7.gif"><BR>
+<P>
+<A NAME=HEADING674>
+<H3> What is the IDL-to-Ada95 mapping?</H3>
+ The <A NAME=MARKER2_11>Ada95 mapping defines how IDL constructs in an IDL specification for an object will be mapped to Ada95 constructs in the Ada95 language bindings for the object.  IDL interfaces map to Ada95 child packages containing a tagged type.  IDL constants map to Ada95 constants.  IDL types map to Ada95 types or generic instantiations for sequences and string types.  IDL exceptions map to Ada95 exceptions with occurrence data.  IDL attributes and operations map to Ada95 primitive subprograms.<P>
+ The specification of this mapping is currently in progress.  The PowerAda emitters produce bindings that do not completely comply with the current mapping.<P>
+<A NAME=HEADING675>
+<H3> Further Reading</H3>
+ The following background references are recommended reading.<P>
+<UL>
+<LI><EM>The Common Object Request Broker: Architecture and Specification</EM> available from Object Management Group, Inc.<P>
+<LI><EM>SOMobjects Developer Toolkit -- An Overview</EM> available from IBM Corp. and provided as softcopy in this distribution.<P>
+<LI><EM>Proposed IDL-Ada9X Language Mapping Specification</EM> provided as softcopy in this distribution.  As revisions become available, they can be downloaded via anonymous ftp from ocsystems.com.<P>
+<LI><EM>SOMobjects Developer Toolkit Users Guide</EM> available from IBM Corp.<P>
+</UL>
+<HR>
+<A HREF="powerada_181.html">[Next]</A> <A HREF="powerada_179.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+<P>
+<ADDRESS>Copyright 1996, OC Systems, Inc.</ADDRESS>
+<P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

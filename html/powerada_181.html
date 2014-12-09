@@ -1,0 +1,53 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE> Using Class Libraries</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING676>
+<A HREF="powerada_182.html">[Next]</A> <A HREF="powerada_180.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+CHAPTER 17   SOM, CORBA and IDL<P>
+<H1> Using Class Libraries</H1>
+<HR>
+ <A NAME=MARKER2_1>The first step in using a class library from Ada is to generate the Ada95 usage stub binding from the IDL specification.  Then the usage stub bindings should be compiled and linked with the client program; they require no modification by the user.  This section describes this process.<P>
+<A NAME=HEADING677>
+<H3> Generating Interface Stub Bindings</H3>
+ <A NAME=MARKER2_2>To use a class library from an Ada program you must generate (and compile) the interface stub bindings from the IDL specification.  To generate Ada95 interface stub bindings specify the <CODE>ada</CODE> emitter on the SOM compiler command line as follows:<P>
+<PRE>
+sc -sada my_file.idl
+</PRE>
+ This will produce a bindings file<CODE> my_file.ada</CODE>.<P>
+ The SOM Compiler uses the LIBPATH environment variable to find the emitter (<CODE>emitada.dll</CODE>) and uses the SMINCLUDE environment variable to find the emitter template file (<CODE>ada.efw</CODE>).  Both are required.<P>
+<A NAME=HEADING678>
+<H3> Interface Stub Bindings Contents</H3>
+ Object interfaces in IDL are mapped to Ada packages to contain the declarations associated with an object interface.  Within the package is a tagged type, named "Ref", that is the object reference type and is used to declare object variables that refer to actual objects.  The object reference type provides for (single) inheritance between object interfaces that parallels the IDL inheritance.<P>
+ In Ada, object variables are wrappers for the SOM object pointer.  An object variable is generally used to invoke a method on an object instance.  It is provided as the first parameter to the method subprogram call and designates the target object.  The object variable may also be used to perform a SOM-specific function.  In this case the "som_object" component of the tagged type should be referenced.  This component is a SOM object pointer, which is required in most SOM calls.<P>
+ Object variables can be initialized in two ways.  The first way is to directly create an object instance using the "New_Instance" subprogram declared in the object interface package.  The object instance can be destroyed by calling the "Free_Instance" subprogram.  The second way to create an object reference is from a SOM object pointer using the "To_Ref" subprogram of the resulting object interface package.  This method converts SOM object pointers returned from methods to the desired Ada wrapper type while verifying the validity of the conversion.<P>
+ The object interface package also contains some SOM-specific declarations.  The major and minor version numbers specified in the IDL are translated to constants in the object interface package. Access to the class initialization function is provided by the "New_Class" subprogram declaration.<P>
+ All the declarations in an IDL object interface are translated to the corresponding Ada declaration within the object interface package. IDL constant declarations are translated to Ada constant declarations. IDL type declarations are translated to Ada type declarations or generic instantiations for sequence and string declarations.  IDL exception declarations are translated to Ada exception declarations with a record declaration to describe exception occurrence data. <P>
+ IDL attribute declarations are translated to a pair of Ada subprogram declarations.  A "get" subprogram retrieves the value of the associated attribute and a "put" subprogram modifies the value of the attribute.   The "put" subprogram will not be present if the attribute was specified as "readonly". <P>
+ IDL operation declarations are translated to Ada subprogram declarations. The first parameter of the subprogram will be the object variable that designates the target object.  The remaining arguments represent the implicit and explicit method parameters.<P>
+<A NAME=HEADING679>
+<H3> Compiling and Linking</H3>
+ This section describes how to compile and link a client program written in Ada.  Compiling and linking a client program can be done in one of two ways, depending on how the class is packaged.<P>
+ If the class is not packaged in a class library (the source for the implementation of the object class is available) then the client program and the object class implementation can be compiled and linked together (statically) in the same executable.  The object class should be compiled separately from the Ada client program and included during the bind step:<P>
+<PRE>
+xlc -I. -I$SOMBASE/include hello.c   # <EM>compile class in C
+</EM><A HREF="powerada_211.html#0">ada</A> client_program.ada               # <EM>compile client in Ada
+</EM>ada -o my_program -b client_main -i hello.o  # <EM>bind Ada main
+</EM>                                             # <EM>including C</EM>
+</PRE>
+ If the object class is packaged as a class library then the "import library" provided with the class library should be included in the bind step of the client program to resolve references to the class library:<P>
+<PRE>
+<A HREF="powerada_211.html#0">ada</A> client_program.ada   # </EM><EM>compile client in Ada
+</EM>ada -o my_program -b client_main -i libhello.a
+                         # <EM>bind Ada main including li</EM>b
+</PRE>
+<HR>
+<A HREF="powerada_182.html">[Next]</A> <A HREF="powerada_180.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+<P>
+<ADDRESS>Copyright 1996, OC Systems, Inc.</ADDRESS>
+<P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

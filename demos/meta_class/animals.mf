@@ -1,0 +1,58 @@
+# @(#) ada/runtime/som/animals.mf, som, power9x.1 1.3 6/9/95 17:49:17
+
+#-----------------------------------------------------------------------------
+# Makefile for: Animals example.
+# 
+# Change History:
+#
+# 95Jun09 gvc Remove all: animals as target (d1381)
+# 95Jan31 swn Remove animals.dll from all.
+# 95Jan06 swn Created.
+#-----------------------------------------------------------------------------
+
+INCLUDEPATH = -I$(SOMBASE)/include -I.
+LIBDIRPATH  = -L. -L$(SOMBASE)/lib
+LIBLIST     = -lsomtk
+OBJS  = animals.o 
+EXPS  = animals.exp 
+
+all:  animals_client
+
+clean:
+	/bin/rm -f *.o *.h *.ih *~ animals_client
+
+.SUFFIXES: .ada .adai .idl .ih .h .c .o
+	
+.c.o:
+	xlc -c -g -I. $(INCLUDEPATH) $<
+
+.idl.h:
+	sc -sh  $*.idl
+
+.idl.ih:
+	sc -sih  $*.idl
+
+.idl.c:
+	sc -sc $*.idl
+
+.idl.ada:
+	sc -sada $*.idl
+
+.idl.adai:
+	sc -sadai $*.idl
+
+animals.o: animals.ih animals.h animals.c      
+animals.ih: animals.idl
+animals.h:  animals.idl                            
+animals.c: animals.ih             
+animals.ada: animals.idl               
+animals.adai: animals.idl               
+
+#
+# Build the executable
+#
+animals_client: animals_client.ada animals.ada animals.o
+	ada animals.ada
+	ada animals_client.ada
+	ada -o animals_client -b animals_client -i animals.o
+

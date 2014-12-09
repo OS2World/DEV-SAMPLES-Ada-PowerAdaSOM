@@ -1,0 +1,98 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE> Implementing Class Libraries</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING680>
+<A HREF="powerada_183.html">[Next]</A> <A HREF="powerada_181.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+CHAPTER 17   SOM, CORBA and IDL<P>
+<H1> Implementing Class Libraries</H1>
+<HR>
+ <A NAME=MARKER2_1>The first step in implementing a class library in Ada is to generate the Ada95 implementation skeleton binding from the IDL specification. Then the implementation skeleton binding should be modified to include the object implementation.  The full implementation should be compiled and linked (statically) with the client program.  This section describes this process.<P>
+<DL>
+<DT><B><B>NOTE:</B> </B><DD>The Ada95 Implementation Skeleton Emitter will <B>OVERWRITE</B> any existing binding file.  It does not update the file as the C/C++ Emitters do.  You have been warned.<P>
+<DT><B><B>NOTE:</B></B><DD> Classes implemented in Ada can only be used in Ada client programs or in special Ada object implementation servers.  They cannot be used from C/C++ clients.<P>
+</DL>
+<A NAME=HEADING681>
+<H3> Generating Implementation Skeleton Bindings</H3>
+ To implement a class library in Ada you must generate (and compile) the implementation skeleton bindings from the IDL specification.  To generate Ada95 implementation skeleton bindings specify the "adai" emitter on the SOM compiler command line as follows:<P>
+<PRE>
+sc -sadai my_file.idl
+</PRE>
+ This will produce a bindings file <CODE>my_file.adai</CODE>.<P>
+ The SOM Compiler uses the LIBPATH environment variable to find the emitter (<CODE>emitadai.dll</CODE>) and uses the SMINCLUDE environment variable to find the emitter template file (<CODE>adai.efw</CODE>).  Both are required.<P>
+<A NAME=HEADING682>
+<H3> Implementation Skeleton Contents</H3>
+ Object interfaces in IDL are mapped to Ada packages to contain the implementation of an object interface.  The object implementation packages in the bindings will not be referred to directly by the client program.  Instead, SOM will direct requests made of the interface stub bindings to the appropriate subprogram in the implementation skeleton. <P>
+ The object implementation package contains a number of data structures that describe the class.  These data structures are used by the "New_Class" subprogram to register the class with SOM.  The "New_Class" subprogram also initializes all the classes required by the current class.  No user modification of these parts is required.<P>
+ The object implementation package also contains a declaration of the object instance data.  The object instance data includes the attribute data (unless "nodata" is used) and any instance declarations in the implementation statement.  The object instance data is referenced and modified by the methods of the object class.  The object instance data structure of an object instance can be accessed using the "somThis" local variable which is initialized by calling the "Get_InstanceData" subprogram.<P>
+ For each attribute declaration in the IDL specification, a "get" and "set" subprogram will be generated, unless the attribute is "readonly" in which case no "set" operation is generated.  For ordinary attribute types the "get" and "set" subprograms can be left unchanged.  If the attribute value is string or pointer type then the "noget" and "noset" modifiers should be used to generate skeleton subprograms (like normal operations below) rather than the default attribute subprograms.<P>
+ For each operation declared in the IDL specification, a skeleton subprogram will be generated.  The skeleton must be filled in by the implementor.<P>
+<A NAME=HEADING683>
+<H3> Implementing SOM Objects In Ada </H3>
+ To implement SOM Objects in Ada, a shared module must be created. This can be easily done with the "-s" compiler switch, which binds a main program as a shared module instead of an executable.  The steps involved in this process are:<P>
+<UL>
+<LI>Generate the Ada Impl code by invoking "sc -sadai" on the .idl file.<P>
+<LI>Complete the implementation of the class by adding code to the resulting Impl (.adai) file.<P>
+<LI>Create a main program for binding the class.<P>
+<LI>Compile and bind the shared module.<P>
+</UL>
+ The resulting shared module can then act as a class implementation for any language, or for distributed applications.  (Some restrictions may apply to the use of Ada features in shared modules; consult the README file for your version of PowerAda or contact us at <CODE>ocstools@ocsystems.com</CODE>.)  An example of this process is provided online in the <A HREF="powerada_453.html#1">"Simple SOM Demo"</A>.<P>
+<A NAME=HEADING684>
+<H3> Generate The Implementation Skeleton</H3>
+ The following command:<P>
+<PRE>
+   sc -sadai hello.idl
+</PRE>
+ will create an Ada Impl file named "hello.adai" with "null" bodies for each of the interfaces named in the IDL file.  You must edit the body(ies) of these subprograms to insert the implementations.<P>
+<A NAME=HEADING685>
+<H3> Compile the Implementation</H3>
+ Ada Impl files must be compiled with checks suppressed; always specify the -S compiler option.  Without checks suppressed, Program_Error may be raised for elaboration check.  Only the Impl (.adai) need be compiled with checks suppressed:  units called by the Impl can have exception checking enabled.  This restriction will be removed in a future release of PowerAda.<P>
+ No other special processing is required for Impl files.<P>
+<A NAME=HEADING686>
+<H3> Create a Main Program for the Class</H3>
+ Use the following main program as a "template" with which to bind your class implementation.  Substitute every occurrence of "Hello" with the name of the class.<P>
+<PRE>
+   procedure SOMInitModule;
+   pragma Export (SOMInitModule,".SOMInitModule");
+   with Som;
+   with Hello_Impl;
+   with System;
+   procedure SOMInitModule is
+  procedure AdaInit;
+  pragma Interface( C, AdaInit );
+begin
+  declare
+    Dummy_Class:  SOM.SOMClassPtr; 
+  begin
+    Dummy_Class := Hello_Impl.New_Class(
+       Hello_Impl.Major_Version, Hello_Impl.Minor_Version);
+  end; 
+end SOMInitModule;
+</PRE>
+ (In following example, assume that this subprogram is contained in the file "initmod.ada".)<P>
+<A NAME=HEADING687>
+<H3> Bind the Shared Module</H3>
+ Binding the class implementation as a shared module is very much like binding an executable program, with two additions:  the -s switch is specified and the exports list is passed to the linker.<P>
+ The exports list is created by invoking the SOM compiler on the IDL file with the option "-sexp":<P>
+<PRE>
+  sc -sexp hello.idl
+</PRE>
+ An exports file "hello.exp" is created.  This is a text file which names the entry points provided by the shared module.  It is passed to the linker by specifying "ibE:hello.exp".  This adds the string "-bE:hello.exp" to the linker options.  Note that no whitespace can appear between "i" and "bE:hello.exp", or the linker's "b" flag will be interpreted as a compiler option.<P>
+ In this case, the following command might be used to create the shared module:<P>
+<PRE>
+   ada -sm initmod.ada -o hello.dll -i-bE:hello.exp
+</PRE>
+ Finally, the exports file is added to an archive file:<P>
+<PRE>
+   ar ruv libhello.a hello.exp 
+</PRE>
+<HR>
+<A HREF="powerada_183.html">[Next]</A> <A HREF="powerada_181.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+<P>
+<ADDRESS>Copyright 1996, OC Systems, Inc.</ADDRESS>
+<P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

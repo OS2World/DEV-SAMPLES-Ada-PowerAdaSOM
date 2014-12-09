@@ -1,0 +1,8 @@
+ 7
+DIRECTORY|..|som/demos/hello|Directory| 1999| 5| 12|  36366.00000|May 12 10:06|FALSE| 1|
+PLAIN_TEXT|setup|som/demos/hello|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|hello.idl|som/demos/hello|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+ADA_SOURCE|hello_client.ada|som/demos/hello|Ada Source| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|hello.mf|som/demos/hello|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+ADA_SOURCE|initmod.ada|som/demos/hello|Ada Source| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+POWERADA_LIST|adalib.imports|som/demos/hello|Imports List| 1997| 7| 2|  28178.00000|Jul 2 1997|FALSE| 1|

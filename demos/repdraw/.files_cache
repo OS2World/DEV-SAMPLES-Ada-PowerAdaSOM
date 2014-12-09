@@ -1,0 +1,9 @@
+ 8
+DIRECTORY|..|som/demos/repdraw|Directory| 1999| 5| 12|  36366.00000|May 12 10:06|FALSE| 1|
+PLAIN_TEXT|README|som/demos/repdraw|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|alib.list|som/demos/repdraw|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|Makefile|som/demos/repdraw|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+ADA_SOURCE|repdraw.ada|som/demos/repdraw|Ada Source| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|run.sh|som/demos/repdraw|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+C_SOURCE|tablet.c|som/demos/repdraw|C Source| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|
+PLAIN_TEXT|tablet.idl|som/demos/repdraw|Text File| 1996| 10| 7|  51240.00000|Oct 7 1996|FALSE| 1|

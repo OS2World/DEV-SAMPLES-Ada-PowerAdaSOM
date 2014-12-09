@@ -1,0 +1,67 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE> Required Setup</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING688>
+<A HREF="powerada_184.html">[Next]</A> <A HREF="powerada_182.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+CHAPTER 17   SOM, CORBA and IDL<P>
+<H1> Required Setup</H1>
+<HR>
+ <A NAME=MARKER2_1>This section describes how to setup your environment to use the PowerAda Ada95 Emitters.<P>
+<A NAME=HEADING689>
+<H3> Required SOM Products</H3>
+ To build and use SOM classes you will have to install optional IBM products.  To build class libraries and statically link them with programs you will need <EM>SOMObjects Developer Toolkit for AIX/6000</EM>. To use object servers and dynamically link class libraries within a single machine you will need <EM>SOMObjects Workstation Enabler for AIX/6000</EM>.  To Distribute objects across the network you will need <EM>SOMObjects Workgroup Enabler for AIX/6000</EM>.<P>
+<A NAME=HEADING690>
+<H3> User Environment</H3>
+ To setup you environment for the SOM product, invoke the SOM setup script <CODE>  /usr/lpp/som/bin/somenv.sh</CODE> (or <CODE>somenv.csh</CODE> for csh users).<P>
+ You will need to add the SOM bin directory to your PATH:<P>
+<PRE>
+export PATH=/usr/lpp/som/bin:$PATH
+</PRE>
+ To use the Ada95 Emitters with the SOM Compiler add the path of the PowerAda emitters to the LIBPATH environment variable:<P>
+<PRE>
+export LIBPATH=$POWERADA/lib:$LIBPATH
+</PRE>
+ Note that if LIBPATH was empty previously then <CODE>/usr/lib</CODE> should be included in the LIBPATH as well:<P>
+<PRE>
+export LIBPATH=$LIBPATH:/usr/lib
+</PRE>
+ To use the Ada95 Emitters you must also add the path of the emitter template files to the SMINCLUDE environment variable:<P>
+<PRE>
+export SMINCLUDE=$POWERADA/lib:$SMINCLUDE
+</PRE>
+<A NAME=HEADING691>
+<H3> SOM Toolkit Bindings</H3>
+ Bindings for the SOM Toolkit and SOM Frameworks are pre-compiled in the SOM sublibrary.  These bindings should be sufficient for most users. You can use the PowerAda <A HREF="powerada_31.html#0">Unit Browser</A> to examine the source for the bindings.<P>
+ If required, you can generate the Ada95 bindings from the SOM IDL yourself.  Some of the generated bindings require modification to work around compiler and emitter problems.<P>
+ First generate the Ada95 bindings from the SOM IDL with the following two commands:<P>
+<PRE>
+sc -sada -mtypeprefix=SOM /usr/lpp/som/include/*.idl
+sc -sada -mtypeprefix=SCTypes /usr/lpp/som/include/sc*.idl
+</PRE>
+ Now you need to make the workaround changes:<P>
+<UL>
+<LI>The body of package SOMObject in file <CODE>somobj.ada</CODE> must be removed and placed in a file named <CODE>somobj.ada.body</CODE>.<P>
+<LI>A local subtype must be declared to rename an external type that is a homograph of the subprogram "sompstat" in package SOMPAsciiMediaInterface in file <CODE>fmi.ada</CODE>.<P>
+<LI>Anonymous sequence types in IDL structs cause referencing problems in package OperationDef in file <CODE>operatdf.ada</CODE>.<P>
+</UL>
+ Refer to the version of these files in the distribution for the appropriate corrections.<P>
+ Next, generate a compilation order for the bindings files:<P>
+<PRE>
+<A HREF="powerada_228.html#0">asrcdep</A> -c *.ada *.body &gt; COMPORDER
+</PRE>
+ Finally, compile the bindings files (into a new sublibrary):<P>
+<PRE>
+<A HREF="powerada_211.html#0">ada</A> -vI &lt; COMPORDER 
+</PRE>
+ The bindings are now ready to use.<P>
+<HR>
+<A HREF="powerada_184.html">[Next]</A> <A HREF="powerada_182.html">[Previous]</A> <A HREF="powerada_1.html">[Top]</A> <A HREF="powerada_3.html">[Contents]</A> <A HREF="powerada_382.html">[Index]</A><P>
+<P>
+<ADDRESS>Copyright 1996, OC Systems, Inc.</ADDRESS>
+<P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

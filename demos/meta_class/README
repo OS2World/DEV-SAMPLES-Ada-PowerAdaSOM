@@ -1,0 +1,185 @@
+SOM Metaclass Demo
+
+This demo illustrates the use of SOM metaclasses to provide customized
+constructors and to perform basic object instance tracking.  This 
+is a re-implementation of a standard SOM example in Ada.
+
+In this demo, several object classes are defined.  A general class 
+'Animal' defines the interface for all animals in the system.
+Animals have several attributes and can perform several operations.
+Animals has a metacalss which controls the creation of animals
+and tracks all the instances created.
+
+The animal class is subclassed as the 'Dog' class which extends the
+orginal class by adding breed and color attributes.  The animal metaclass
+is subclassed to produce a metaclass 'Kennel' which controls the 
+creation of dog objects.  
+
+The dog class is further subclassed as 'BigDog' and 'LittleDog' 
+and their 'talk' operation is overridden to provide that appropriate
+bark for each.
+
+The IDL for the animal classes is contained in 'animals.idl'.
+
+
+Required setup:
+
+The PowerAda environment must be set to 95 mode.  Issue the following command:
+
+   mode95
+
+The SOM environment must be accessible.  Issue the following commands:
+
+   . /usr/lpp/som/somenv.sh
+   export LIBPATH=$POWERADA/lib:$LIBPATH:/usr/lib
+   export SMINCLUDE=$POWERADA/lib:$SMINCLUDE
+
+Get a copy of the demo files.  Issue the following commands:
+
+   mkdir animals_demo
+   cd animals_demo
+   cp $POWERADA/exmples/som/animals* .
+
+Create a compiler library file.  Issue the following command:
+ 
+   cat >alib.list <<EOF
+   adalib
+   $POWERADA/lib/som
+   EOF
+
+Generate Bindings:
+
+The first step in building the demo program is to generate the language
+bindings that are required from the IDL specifciation.  We will need
+usage bindings in Ada so that the Ada client can call the object, and we 
+will need implementation skeleton bindings in C 
+so we can implement the animal classes in C.
+
+To generate the required bindings enter the following commands to invoke
+the SOM IDL Compiler:
+
+   # generate Ada usage stub binding file 'animals.ada'
+   sc -sada  animals.idl        
+ 
+   # generate C usage stub binding file 'animals.h'
+   sc -sh    animals.idl        
+
+   # generate C implemenation skeleton binding files 
+   # 'animals.ih' and 'animals.c'
+   sc -ih:c  animals.idl        
+
+
+Impelement the Animal Classes C:
+
+The implementation is rather lengthy, so just use the one provided
+in the demo directory, 'animals.c'.  
+
+
+Implement the Animal Client in Ada:
+
+The implementation of the animal client is contained in file 
+'animals_client.ada'.  The client withs the various usage stub packages,
+as well as some other SOM and Corba pacakges.
+
+The client initializes the SOM environment with a call
+to 'somEnvironmentNew'.  The client initalizes the animal classes with 
+several 'new_class' calls, to create the animal subclasses.  The client
+then creates several instances:
+
+  - a new animal class for scary animals that roar,
+  - a new (regular) dog named Rover that growls,
+  - a new little dog named Pierre that yaps, and
+  - six new big dogs of various anems, breeds, and colors.
+
+The client then gets all of the previously created animals that have been 
+tracked by the animal metaclass and displays them, then destroys them.
+
+
+Build the Hello Clients:
+
+To build the animal client program using the C object implementation 
+issue the following commands:
+
+   # compile the C implementation of the animal objects.
+   xlc -c -g -I. -I$SOMBASE/include animals.c
+
+   # compile the Ada usage stub binding
+   ada animals.ada
+
+   # compile the Ada client
+   ada animals_client.ada
+
+   # bind the program
+   ada -o animals_client -b animals_client -i animals.o
+
+The client program is in 'animals_client'.  
+
+
+Running the Program:
+
+Running the program results in the following:
+
+% animals_client
+
+The animal named Scary (Genus: <Unknown>, Species: <Unknown>) says:
+        Roar!
+
+The animal named Rover (Genus: Canis, Species: Familiaris) says:
+        Grrr!
+Its breed is Retriever and its color is yellow.
+
+The animal named Pierre (Genus: Canis, Species: Familiaris) says:
+        woof woof
+        woof woof
+(and sometimes: Yap, yap!)
+Its breed is French Poodle and its color is black.
+
+The animal named Guffy (Genus: Canis, Species: Familiaris) says:
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+(and sometimes: Yap, yap!)
+Its breed is Retriever and its color is brown.
+
+The animal named Waldo (Genus: Canis, Species: Familiaris) says:
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+(and sometimes: Yap, yap!)
+Its breed is German Shepherd and its color is black.
+
+The animal named Pluto (Genus: Canis, Species: Familiaris) says:
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+(and sometimes: Yap, yap!)
+Its breed is Animated and its color is tan.
+
+The animal named Elvis (Genus: Canis, Species: Familiaris) says:
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+(and sometimes: Yap, yap!)
+Its breed is Hounddog and its color is brown.
+
+The animal named Spike (Genus: Canis, Species: Familiaris) says:
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+(and sometimes: Yap, yap!)
+Its breed is Bulldog and its color is black.
+
+The animal named Lassie (Genus: Canis, Species: Familiaris) says:
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+        WOOF WOOF
+(and sometimes: Yap, yap!)
+Its breed is Collie and its color is tan.
+Total animal population is currently  9
+% 

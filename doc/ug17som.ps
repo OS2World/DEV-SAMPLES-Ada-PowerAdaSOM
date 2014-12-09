@@ -1,0 +1,5334 @@
+%!PS-Adobe-3.0
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%PageOrder: (atend)
+%%DocumentFonts: (atend)
+%%Creator: Frame 4.0
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginProlog
+%
+% Frame ps_prolog 4.0, for use with Frame 4.0 products
+% This ps_prolog file is Copyright (c) 1986-1993 Frame Technology
+% Corporation.  All rights reserved.  This ps_prolog file may be
+% freely copied and distributed in conjunction with documents created
+% using FrameMaker, FrameBuilder and FrameViewer as long as this 
+% copyright notice is preserved.
+%
+% Frame products normally print colors as their true color on a color printer
+% or as shades of gray, based on luminance, on a black-and white printer. The
+% following flag, if set to True, forces all non-white colors to print as pure
+% black. This has no effect on bitmap images.
+/FMPrintAllColorsAsBlack             true def
+%
+% Frame products can either set their own line screens or use a printer's 
+% default settings. Three flags below control this separately for no 
+% separations, spot separations and process separations. If a flag
+% is true, then the default printer settings will not be changed. If it is
+% false, Frame products will use their own settings from a table based on
+% the printer's resolution.
+/FMUseDefaultNoSeparationScreen      true  def
+/FMUseDefaultSpotSeparationScreen    true  def
+/FMUseDefaultProcessSeparationScreen false def
+%
+% For any given PostScript printer resolution, Frame products have two sets of 
+% screen angles and frequencies for printing process separations, which are 
+% recomended by Adobe. The following variable chooses the higher frequencies
+% when set to true or the lower frequencies when set to false. This is only
+% effective if the appropriate FMUseDefault...SeparationScreen flag is false.
+/FMUseHighFrequencyScreens true def
+%
+% PostScript Level 2 printers contain an "Accurate Screens" feature which can
+% improve process separation rendering at the expense of compute time. This 
+% flag is ignored by PostScript Level 1 printers.
+/FMUseAcccurateScreens true def
+%
+% The following PostScript procedure defines the spot function that Frame
+% products will use for process separations. You may un-comment-out one of
+% the alternative functions below, or use your own.
+%
+% Dot function
+/FMSpotFunction {abs exch abs 2 copy add 1 gt 
+		{1 sub dup mul exch 1 sub dup mul add 1 sub }
+		{dup mul exch dup mul add 1 exch sub }ifelse } def
+%
+% Line function
+% /FMSpotFunction { pop } def
+%
+% Elipse function
+% /FMSpotFunction { dup 5 mul 8 div mul exch dup mul exch add 
+%		sqrt 1 exch sub } def
+%
+%
+/FMversion (4.0) def 
+/FMLevel1 /languagelevel where {pop languagelevel} {1} ifelse 2 lt def
+/FMPColor
+	FMLevel1 {
+		false
+		/colorimage where {pop pop true} if
+	} {
+		true
+	} ifelse
+def
+/FrameDict 400 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in PS 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} bind def
+	} if
+/FMshowpage /showpage load def
+/FMquit /quit load def
+/FMFAILURE { 
+	dup = flush 
+	FMshowpage 
+	/Helvetica findfont 12 scalefont setfont
+	72 200 moveto
+	show FMshowpage 
+	FMquit 
+	} def 
+/FMVERSION {
+	FMversion ne {
+		(Frame product version does not match ps_prolog!) FMFAILURE
+		} if
+	} def 
+/FMBADEPSF { 
+	(PostScript Lang. Ref. Man., 2nd Ed., H.2.4 says EPS must not call X              )
+	dup dup (X) search pop exch pop exch pop length 
+	4 -1 roll 
+	putinterval 
+	FMFAILURE
+	} def
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+/concatprocs
+	{
+	/proc2 exch cvlit def/proc1 exch cvlit def/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval newproc proc1 length proc2 putinterval newproc cvx
+}def
+FrameDict begin 
+/FMnone 0 def
+/FMcyan 1 def
+/FMmagenta 2 def
+/FMyellow 3 def
+/FMblack 4 def
+/FMcustom 5 def
+/FrameNegative false def 
+/FrameSepIs FMnone def 
+/FrameSepBlack 0 def
+/FrameSepYellow 0 def
+/FrameSepMagenta 0 def
+/FrameSepCyan 0 def
+/FrameSepRed 1 def
+/FrameSepGreen 1 def
+/FrameSepBlue 1 def
+/FrameCurGray 1 def
+/FrameCurPat null def
+/FrameCurColors [ 0 0 0 1 0 0 0 ] def 
+/FrameColorEpsilon .001 def	
+/eqepsilon {		
+	sub dup 0 lt {neg} if
+	FrameColorEpsilon le
+} bind def
+/FrameCmpColorsCMYK { 
+	2 copy 0 get exch 0 get eqepsilon {
+		2 copy 1 get exch 1 get eqepsilon {
+			2 copy 2 get exch 2 get eqepsilon {
+				3 get exch 3 get eqepsilon
+			} {pop pop false} ifelse
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/FrameCmpColorsRGB { 
+	2 copy 4 get exch 0 get eqepsilon {
+		2 copy 5 get exch 1 get eqepsilon {
+			6 get exch 2 get eqepsilon
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/RGBtoCMYK { 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	3 copy 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	dup dup dup 
+	6 1 roll 
+	4 1 roll 
+	7 1 roll 
+	sub 
+	6 1 roll 
+	sub 
+	5 1 roll 
+	sub 
+	4 1 roll 
+} bind def
+/CMYKtoRGB { 
+	dup dup 4 -1 roll add 						  
+	5 1 roll 3 -1 roll add 						  
+	4 1 roll add 								  
+	1 exch sub dup 0 lt {pop 0} if 3 1 roll 	  
+	1 exch sub dup 0 lt {pop 0} if exch 	      
+	1 exch sub dup 0 lt {pop 0} if exch	  		  
+} bind def
+/FrameSepInit {
+	1.0 RealSetgray
+} bind def
+/FrameSetSepColor { 
+	/FrameSepBlue exch def
+	/FrameSepGreen exch def
+	/FrameSepRed exch def
+	/FrameSepBlack exch def
+	/FrameSepYellow exch def
+	/FrameSepMagenta exch def
+	/FrameSepCyan exch def
+	/FrameSepIs FMcustom def
+	setCurrentScreen	
+} bind def
+/FrameSetCyan {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 1.0 def
+	/FrameSepIs FMcyan def
+	setCurrentScreen	
+} bind def
+ 
+/FrameSetMagenta {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 1.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMmagenta def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetYellow {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 1.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMyellow def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetBlack {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 1.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMblack def
+	setCurrentScreen
+} bind def
+ 
+/FrameNoSep { 
+	/FrameSepIs FMnone def
+	setCurrentScreen
+} bind def
+/FrameSetSepColors { 
+	FrameDict begin
+	[ exch 1 add 1 roll ]
+	/FrameSepColors  
+	exch def end
+	} bind def
+/FrameColorInSepListCMYK { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsCMYK 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/FrameColorInSepListRGB { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsRGB 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/RealSetgray /setgray load def
+/RealSetrgbcolor /setrgbcolor load def
+/RealSethsbcolor /sethsbcolor load def
+end 
+/setgray { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+		{ RealSetgray } 
+		{ 
+		FrameSepIs FMblack eq 
+			{ RealSetgray } 
+			{ FrameSepIs FMcustom eq 
+			  FrameSepRed 0 eq and
+			  FrameSepGreen 0 eq and
+			  FrameSepBlue 0 eq and {
+			  	RealSetgray
+			  } {
+				1 RealSetgray pop 
+			  } ifelse
+			} ifelse
+		} ifelse
+	end
+} bind def
+/setrgbcolor { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+	{  RealSetrgbcolor }
+	{
+		3 copy [ 4 1 roll ] 
+		FrameColorInSepListRGB
+		{
+				FrameSepBlue eq exch 
+			 	FrameSepGreen eq and exch 
+			 	FrameSepRed eq and
+			 	{ 0 } { 1 } ifelse
+		}
+		{
+			FMPColor {
+				RealSetrgbcolor
+				currentcmykcolor
+			} {
+				RGBtoCMYK
+			} ifelse
+			FrameSepIs FMblack eq
+			{1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		RealSetgray
+	} 
+	ifelse
+	end
+} bind def
+/sethsbcolor {
+	FrameDict begin
+	FrameSepIs FMnone eq 
+	{ RealSethsbcolor } 
+	{
+		RealSethsbcolor 
+		currentrgbcolor  
+		setrgbcolor 
+	} 
+	ifelse
+	end
+} bind def
+FrameDict begin
+/setcmykcolor where {
+	pop /RealSetcmykcolor /setcmykcolor load def
+} {
+	/RealSetcmykcolor {
+		4 1 roll
+		3 { 3 index add 0 max 1 min 1 exch sub 3 1 roll} repeat 
+		setrgbcolor pop
+	} bind def
+} ifelse
+userdict /setcmykcolor { 
+		FrameDict begin
+		FrameSepIs FMnone eq
+		{ RealSetcmykcolor } 
+		{
+			4 copy [ 5 1 roll ]
+			FrameColorInSepListCMYK
+			{
+				FrameSepBlack eq exch 
+				FrameSepYellow eq and exch 
+				FrameSepMagenta eq and exch 
+				FrameSepCyan eq and 
+				{ 0 } { 1 } ifelse
+			}
+			{
+				FrameSepIs FMblack eq
+				{1.0 exch sub 4 1 roll pop pop pop} {
+				FrameSepIs FMyellow eq
+				{pop 1.0 exch sub 3 1 roll pop pop} {
+				FrameSepIs FMmagenta eq
+				{pop pop 1.0 exch sub exch pop } {
+				FrameSepIs FMcyan eq
+				{pop pop pop 1.0 exch sub } 
+				{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+			} ifelse
+			RealSetgray
+		}
+		ifelse
+		end
+	} bind put
+FMLevel1 not { 
+	
+	/patProcDict 5 dict dup begin
+		<0f1e3c78f0e1c387> { 3 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<0f87c3e1f0783c1e> { 3 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+		<8142241818244281> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke
+											-1 -1 moveto 9 9 lineto stroke } bind def
+		<03060c183060c081> { 1 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<8040201008040201> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+	end def
+	/patDict 15 dict dup begin
+		/PatternType 1 def		
+		/PaintType 2 def		
+		/TilingType 3 def		
+		/BBox [ 0 0 8 8 ] def 	
+		/XStep 8 def			
+		/YStep 8 def			
+		/PaintProc {
+			begin
+			patProcDict bstring known {
+				patProcDict bstring get exec
+			} {
+				8 8 true [1 0 0 -1 0 8] bstring imagemask
+			} ifelse
+			end
+		} bind def
+	end def
+} if
+/combineColor {
+    FrameSepIs FMnone eq
+	{
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceCMYK]] setcolorspace
+			FrameCurColors 0 4 getinterval aload pop FrameCurPat setcolor
+		} {
+			FrameCurColors 3 get 1.0 ge {
+				FrameCurGray RealSetgray
+			} {
+				FMPColor graymode and {
+					0 1 3 { 
+						FrameCurColors exch get
+						1 FrameCurGray sub mul
+					} for
+					RealSetcmykcolor
+				} {
+					4 1 6 {
+						FrameCurColors exch get
+						graymode {
+							1 exch sub 1 FrameCurGray sub mul 1 exch sub
+						} {
+							1.0 lt {FrameCurGray} {1} ifelse
+						} ifelse
+					} for
+					RealSetrgbcolor
+				} ifelse
+			} ifelse
+		} ifelse
+	} { 
+		FrameCurColors 0 4 getinterval aload
+		FrameColorInSepListCMYK {
+			FrameSepBlack eq exch 
+			FrameSepYellow eq and exch 
+			FrameSepMagenta eq and exch 
+			FrameSepCyan eq and
+			FrameSepIs FMcustom eq and
+			{ FrameCurGray } { 1 } ifelse
+		} {
+			FrameSepIs FMblack eq
+			{FrameCurGray 1.0 exch sub mul 1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop FrameCurGray 1.0 exch sub mul 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceGray]] setcolorspace
+			FrameCurPat setcolor
+		} { 
+			graymode not FMLevel1 and {
+				
+				dup 1 lt {pop FrameCurGray} if
+			} if
+			RealSetgray
+		} ifelse
+	} ifelse
+} bind def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+	
+/freq dpi dup 72 div round dup 0 eq {pop 1} if 8 mul div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/dpiranges   [  2540    2400    1693     1270    1200     635      600      0      ] def
+/CMLowFreqs  [ 100.402  94.8683 89.2289 100.402  94.8683  66.9349  63.2456 47.4342 ] def
+/YLowFreqs   [  95.25   90.0    84.65    95.25   90.0     70.5556  66.6667 50.0    ] def
+/KLowFreqs   [  89.8026 84.8528 79.8088  89.8026 84.8528  74.8355  70.7107 53.033  ] def
+/CLowAngles  [  71.5651 71.5651 71.5651 71.5651  71.5651  71.5651  71.5651 71.5651 ] def
+/MLowAngles  [  18.4349 18.4349 18.4349 18.4349  18.4349  18.4349  18.4349 18.4349 ] def
+/YLowTDot    [  true    true    false    true    true     false    false   false   ] def
+/CMHighFreqs [ 133.87  126.491 133.843  108.503 102.523  100.402   94.8683 63.2456 ] def
+/YHighFreqs  [ 127.0   120.0   126.975  115.455 109.091   95.25    90.0    60.0    ] def
+/KHighFreqs  [ 119.737 113.137 119.713  128.289 121.218   89.8026  84.8528 63.6395 ] def
+/CHighAngles [  71.5651 71.5651 71.5651  70.0169 70.0169  71.5651  71.5651 71.5651 ] def
+/MHighAngles [  18.4349 18.4349 18.4349  19.9831 19.9831  18.4349  18.4349 18.4349 ] def
+/YHighTDot   [  false   false   true     false   false    true     true    false   ] def
+/PatFreq     [	10.5833 10.0     9.4055  10.5833 10.0	  10.5833  10.0	   9.375   ] def
+/screenIndex {
+	0 1 dpiranges length 1 sub { dup dpiranges exch get 1 sub dpi le {exit} {pop} ifelse } for
+} bind def
+/getCyanScreen {
+	FMUseHighFrequencyScreens { CHighAngles CMHighFreqs} {CLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getMagentaScreen {
+	FMUseHighFrequencyScreens { MHighAngles CMHighFreqs } {MLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getYellowScreen {
+	FMUseHighFrequencyScreens { YHighTDot YHighFreqs} { YLowTDot YLowFreqs } ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get { 3 div
+			{2 { 1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch} repeat
+			FMSpotFunction } } {/FMSpotFunction load } ifelse
+			0.0 exch
+} bind def
+/getBlackScreen  {
+	FMUseHighFrequencyScreens { KHighFreqs } { KLowFreqs } ifelse
+		screenIndex get 45.0 /FMSpotFunction load 
+} bind def
+/getSpotScreen {
+	getBlackScreen
+} bind def
+/getCompositeScreen {
+	getBlackScreen
+} bind def
+/FMSetScreen 
+	FMLevel1 { /setscreen load 
+	}{ {
+		8 dict begin
+		/HalftoneType 1 def
+		/SpotFunction exch def
+		/Angle exch def
+		/Frequency exch def
+		/AccurateScreens FMUseAcccurateScreens def
+		currentdict end sethalftone
+	} bind } ifelse
+def
+/setDefaultScreen {
+	FMPColor {
+		orgrxfer cvx orggxfer cvx orgbxfer cvx orgxfer cvx setcolortransfer
+	}
+	{
+		orgxfer cvx settransfer
+	} ifelse
+	orgfreq organgle orgproc cvx setscreen
+} bind def
+/setCurrentScreen {
+	FrameSepIs FMnone eq {
+		FMUseDefaultNoSeparationScreen {
+			setDefaultScreen
+		} {
+			getCompositeScreen FMSetScreen
+		} ifelse
+	} {
+		FrameSepIs FMcustom eq {
+			FMUseDefaultSpotSeparationScreen {
+				setDefaultScreen
+			} {
+				getSpotScreen FMSetScreen
+			} ifelse
+		} {
+			FMUseDefaultProcessSeparationScreen {
+				setDefaultScreen
+			} {
+				FrameSepIs FMcyan eq {
+					getCyanScreen FMSetScreen
+				} {
+					FrameSepIs FMmagenta eq {
+						getMagentaScreen FMSetScreen
+					} {
+						FrameSepIs FMyellow eq {
+							getYellowScreen FMSetScreen
+						} {
+							getBlackScreen FMSetScreen
+						} ifelse
+					} ifelse
+				} ifelse
+			} ifelse
+		} ifelse
+	} ifelse 
+} bind def
+end
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgrxfer FMLOCAL
+	/orggxfer FMLOCAL
+	/orgbxfer FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/orgrproc FMLOCAL
+	/orggproc FMLOCAL
+	/orgbproc FMLOCAL
+	/organgle FMLOCAL
+	/orgrangle FMLOCAL
+	/orggangle FMLOCAL
+	/orgbangle FMLOCAL
+	/orgfreq FMLOCAL
+	/orgrfreq FMLOCAL
+	/orggfreq FMLOCAL
+	/orgbfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/edown FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne /manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	0 ne /FrameNegative exch def 
+	0 ne /edown exch def 
+	/yscale exch def
+	/xscale exch def
+	FMLevel1 {
+		manualfeed {setmanualfeed} if
+		/FMdicttop countdictstack 1 add def 
+		/FMoptop count def 
+		setpapername 
+		manualfeed {true} {papersize} ifelse 
+		{manualpapersize} {false} ifelse 
+		{desperatepapersize} {false} ifelse 
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		count -1 FMoptop {pop pop} for
+		countdictstack -1 FMdicttop {pop end} for 
+		}
+		{{1 dict dup /PageSize [paperwidth paperheight]put setpagedevice}stopped
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		 {1 dict dup /ManualFeed manualfeed put setpagedevice } stopped pop }
+	ifelse 
+	
+	FMPColor {
+		currentcolorscreen
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+			cvlit /orgbproc exch def
+				  /orgbangle exch def 
+				  /orgbfreq exch def
+			cvlit /orggproc exch def
+				  /orggangle exch def 
+				  /orggfreq exch def
+			cvlit /orgrproc exch def
+				  /orgrangle exch def 
+				  /orgrfreq exch def
+			currentcolortransfer 
+			FrameNegative {
+				1 1 4 { 
+					pop { 1 exch sub } concatprocs 4 1 roll
+				} for
+				4 copy
+				setcolortransfer
+			} if
+			cvlit /orgxfer exch def
+			cvlit /orgbxfer exch def
+			cvlit /orggxfer exch def
+			cvlit /orgrxfer exch def
+	} {
+		currentscreen 
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+				  
+		currenttransfer 
+		FrameNegative {
+			{ 1 exch sub } concatprocs
+			dup settransfer
+		} if 
+		cvlit /orgxfer exch def
+	} ifelse
+	end 
+} def 
+/pagesave FMLOCAL
+/orgmatrix FMLOCAL
+/landscape FMLOCAL
+/pwid FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch dup /pwid exch def neg translate pop 
+	}{
+		pop /pwid exch def
+	} ifelse
+	edown { [-1 0 0 1 pwid 0] concat } if
+	0 0 moveto paperwidth 0 lineto paperwidth paperheight lineto 
+	0 paperheight lineto 0 0 lineto 1 setgray fill
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin dup
+	array /fillvals exch def
+	dict /patCache exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+% See Adobe's "PostScript Language Reference Manual, 2nd Edition", page 714.
+% "...the following operators MUST NOT be used in an EPS file:" (emphasis ours)
+	/banddevice {(banddevice) FMBADEPSF} def
+	/clear {(clear) FMBADEPSF} def
+	/cleardictstack {(cleardictstack) FMBADEPSF} def 
+	/copypage {(copypage) FMBADEPSF} def
+	/erasepage {(erasepage) FMBADEPSF} def
+	/exitserver {(exitserver) FMBADEPSF} def
+	/framedevice {(framedevice) FMBADEPSF} def
+	/grestoreall {(grestoreall) FMBADEPSF} def
+	/initclip {(initclip) FMBADEPSF} def
+	/initgraphics {(initgraphics) FMBADEPSF} def
+	/initmatrix {(initmatrix) FMBADEPSF} def
+	/quit {(quit) FMBADEPSF} def
+	/renderbands {(renderbands) FMBADEPSF} def
+	/setglobal {(setglobal) FMBADEPSF} def
+	/setpagedevice {(setpagedevice) FMBADEPSF} def
+	/setshared {(setshared) FMBADEPSF} def
+	/startjob {(startjob) FMBADEPSF} def
+	/lettertray {(lettertray) FMBADEPSF} def
+	/letter {(letter) FMBADEPSF} def
+	/lettersmall {(lettersmall) FMBADEPSF} def
+	/11x17tray {(11x17tray) FMBADEPSF} def
+	/11x17 {(11x17) FMBADEPSF} def
+	/ledgertray {(ledgertray) FMBADEPSF} def
+	/ledger {(ledger) FMBADEPSF} def
+	/legaltray {(legaltray) FMBADEPSF} def
+	/legal {(legal) FMBADEPSF} def
+	/statementtray {(statementtray) FMBADEPSF} def
+	/statement {(statement) FMBADEPSF} def
+	/executivetray {(executivetray) FMBADEPSF} def
+	/executive {(executive) FMBADEPSF} def
+	/a3tray {(a3tray) FMBADEPSF} def
+	/a3 {(a3) FMBADEPSF} def
+	/a4tray {(a4tray) FMBADEPSF} def
+	/a4 {(a4) FMBADEPSF} def
+	/a4small {(a4small) FMBADEPSF} def
+	/b4tray {(b4tray) FMBADEPSF} def
+	/b4 {(b4) FMBADEPSF} def
+	/b5tray {(b5tray) FMBADEPSF} def
+	/b5 {(b5) FMBADEPSF} def
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fw 2 div add fy fh 2 div add  translate
+	rotate
+	fw 2 div neg fh 2 div neg translate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count def 
+	} bind def
+/FMENDEPSF {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} bind def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} bind def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} bind def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	statusdict begin stopped end 
+	} bind def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} bind def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped 
+		end
+		} {true} ifelse 
+	} bind def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+FMPColor 
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	}
+ifelse
+/K { 
+	FMPrintAllColorsAsBlack {
+		dup 1 eq 2 index 1 eq and 3 index 1 eq and not
+			{7 {pop} repeat 0 0 0 1 0 0 0} if
+	} if 
+	FrameCurColors astore 
+	pop combineColor
+} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setPatternMode {
+	FMLevel1 {
+		/bwidth  exch def
+		/bpside  exch def
+		/bstring exch def
+		/onbits 0 def  /offbits 0 def
+		freq sangle landscape {90 add} if 
+			{/y exch def
+			 /x exch def
+			 /xindex x 1 add 2 div bpside mul cvi def
+			 /yindex y 1 add 2 div bpside mul cvi def
+			 bstring yindex bwidth mul xindex 8 idiv add get
+			 1 7 xindex 8 mod sub bitshift and 0 ne FrameNegative {not} if
+			 {/onbits  onbits  1 add def 1}
+			 {/offbits offbits 1 add def 0}
+			 ifelse
+			}
+			setscreen
+		offbits offbits onbits add div FrameNegative {1.0 exch sub} if
+		/FrameCurGray exch def
+	} { 
+		pop pop
+		dup patCache exch known {
+			patCache exch get
+		} { 
+			dup
+			patDict /bstring 3 -1 roll put
+			patDict 
+			9 PatFreq screenIndex get div dup matrix scale
+			makepattern
+			dup 
+			patCache 4 -1 roll 3 -1 roll put
+		} ifelse
+		/FrameCurGray 0 def
+		/FrameCurPat exch def
+	} ifelse
+	/graymode false def
+	combineColor
+} bind def
+/setGrayScaleMode {
+	graymode not {
+		/graymode true def
+		FMLevel1 {
+			setCurrentScreen
+		} if
+	} if
+	/FrameCurGray exch def
+	combineColor
+} bind def
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	
+/PFill {
+	graymode FMLevel1 or not {
+		gsave 1 setgray eofill grestore
+	} if
+} bind def
+/PStroke {
+	graymode FMLevel1 or not {
+		gsave 1 setgray stroke grestore
+	} if
+	stroke
+} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setPatternMode} 
+	{setGrayScaleMode}
+	ifelse
+	} bind def
+/V { 
+	PFill gsave eofill grestore
+	} bind def
+/Vclip {
+	clip
+	} bind def
+/Vstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/N { 
+	PStroke
+	} bind def
+/Nclip {
+	strokepath clip newpath
+	} bind def
+/Nstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+	/rad FMLOCAL
+/rarc 
+	{rad 
+	 arcto
+	} bind def
+/RR { 
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	mark
+	newpath
+	{
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rarc
+	x2 y2 x2 y1 rarc
+	x2 y1 x1 y1 rarc
+	x1 y1 x1 y2 rarc
+	closepath
+	} stopped {x1 y1 x2 y2 R} if 
+	cleartomark
+	} bind def
+/RRR { 
+	/rad exch def
+	normalize /y4 exch def /x4 exch def
+	normalize /y3 exch def /x3 exch def
+	normalize /y2 exch def /x2 exch def
+	normalize /y1 exch def /x1 exch def
+	newpath
+	normalize moveto 
+	mark
+	{
+	x2 y2 x3 y3 rarc
+	x3 y3 x4 y4 rarc
+	x4 y4 x1 y1 rarc
+	x1 y1 x2 y2 rarc
+	closepath
+	} stopped
+	 {x1 y1 x2 y2 x3 y3 x4 y4 newpath moveto lineto lineto lineto closepath} if
+	cleartomark
+	} bind def
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	setCurrentScreen
+} bind def
+/CP { 
+	grestore
+	gsave
+	Y 
+	clip
+	setCurrentScreen
+} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	PFill fill
+	grestore
+	} bind def
+/Gstrk {
+	savematrix
+    newpath
+    2 index 2 div add exch 3 index 2 div sub exch 
+    normalize 2 index 2 div sub exch 3 index 2 div add exch 
+    translate
+    scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+    } bind def
+/Gclip { 
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	clip newpath
+	restorematrix
+	} bind def
+/GG { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	rotate 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath
+	PFill
+	fill
+	grestore
+	} bind def
+/GGclip { 
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	clip newpath
+	restorematrix
+	} bind def
+/GGstrk { 
+	savematrix
+    newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath 
+	restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/Aclip {
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	strokepath clip newpath
+	restorematrix
+} bind def
+/Astrk {
+	Gstrk
+} bind def
+/AA { 
+	gsave
+	savematrix
+	newpath
+	
+	3 index 2 div add exch 4 index 2 div sub exch 
+	
+	normalize 3 index 2 div sub exch 4 index 2 div add exch
+	translate 
+	rotate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/AAclip {
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	strokepath clip newpath
+	restorematrix
+} bind def
+/AAstrk {
+	GGstrk
+} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 7 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+	
+	} bind def
+/rip { 
+	   
+	  
+	  bis ris copy pop 
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop 
+	  ris gis copy pop 
+	  dup is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  gis bis copy pop 
+	  dup add is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+      dup dup
+      24 eq { pop pop 3 mul }
+      { 8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse } ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+		 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+FMLevel1 {
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/k cynu magu min yelu min def
+		/u k currentundercolorremoval exec def
+%		/u 0 def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 k currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+}
+{
+/colorSetup2 {
+	[ /Indexed /DeviceRGB 255 
+		{dup red exch get 255 div 
+		 exch dup green exch get 255 div 
+		 exch blue exch get 255 div}
+	] setcolorspace
+} bind def
+} ifelse
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch concatprocs settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def
+	FMLevel1 {	
+		colorsetup
+		/is w d wbytes string def
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	} {
+		colorSetup2
+		/is w d wbytes string def
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {cf is readhexstring pop} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	FMLevel1 {	
+		colorsetup
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{ip} {is} {is} true 3 colorimage
+	} {
+		colorSetup2
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {ip} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+	/d 24 def
+        gsave
+ 	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris} {gis} {bis} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+	/d 24 def
+        gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris gis bis w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+/I { setdash } bind def
+/J { [] 0 setdash } bind def
+%%EndProlog
+%%BeginSetup
+(4.0) FMVERSION
+1 1 0 0 612 792 0 1 14 FMDOCUMENT
+0 0 /Times-Bold FMFONTDEFINE
+1 0 /Helvetica-Bold FMFONTDEFINE
+2 0 /Times-Italic FMFONTDEFINE
+3 0 /Times-Roman FMFONTDEFINE
+4 0 /Helvetica FMFONTDEFINE
+5 0 /Courier FMFONTDEFINE
+6 0 /Courier-Oblique FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+J
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(17-1) 518 99.75 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 113.98 90 113.98 2 L
+0.5 H
+2 Z
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+540 423 90 423 2 L
+0.5 H
+N
+90 621 198 621 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 10 Q
+0.37 (CHAPTER 17) 90 608.68 S
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 24 Q
+-0.88 (SOM, CORBA and IDL) 207 608.68 S
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 11 Q
+(Intr) 90 402.35 T
+(oduction) 108.74 402.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+-0.4 (This section provides a brief introduction to SOM, CORBA, and IDL.  In order to) 216 402.35 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(build SOM tools, the IBM SOMobjects Developer T) 216 390.35 T
+(oolkit is required and must) 425.85 390.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(be licensed separately from PowerAda.) 216 378.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(What Is SOM?) 90 342.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(IBM\325) 216 342.35 T
+(s System Object Model \050SOM\051 is an object-oriented technology for build-) 237.67 342.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ing, packaging, and manipulating binary class libraries, that promotes language-) 216 330.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(independent reuse of components and operating system interoperability) 216 318.35 T
+(.  SOM,) 501.14 318.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(together with Distributed SOM \050DSOM\051 and the other SOM Frameworks, pro-) 216 306.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(vides a broad range of object capabilities including distributed and dynamic) 216 294.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.05 (object manipulation, persistent object manipulation, and replicated object manip-) 216 282.35 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ulation.) 216 270.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The interfaces to class libraries are de\336ned using a programming-language-neu-) 216 246.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tral interface speci\336cation language. Language-speci\336c bindings are produced) 216 234.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.38 (from the language-neutral speci\336cation using the IBM SOM Compiler) 216 222.35 P
+-0.38 (.  The class) 494.04 222.35 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(library user and class library implementor can each choose their preferred imple-) 216 210.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(mentation languages, which can be object-oriented or procedural, and SOM) 216 198.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.15 (guarantees the interface between them.  SOM allows classes implemented in one) 216 186.35 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(language to be subclasses of classes implemented in another language.  SOM) 216 174.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(supports upwards-compatible changes to class libraries without requiring clients) 216 162.35 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "1" 1
+%%Page: "2" 2
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(Introduction) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-2) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(to recompile.  SOM class libraries can be statically bound in the same address) 198 629.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(space as the client for fast method invocation.) 198 617.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(What is CORBA and) 72 581.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(IDL?) 72 570.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(The Object Management Group \050OMG\051 is an industry consortium formed to cre-) 198 581.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ate industry standards for commercially available object-oriented systems.  The) 198 569.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (OMG de\336ned a general Object Management Architecture which de\336nes Applica-) 198 557.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (tion Objects, Common Facilities, Object Services, and an Object Request Broker) 198 545.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\050ORB\051 as inter) 198 533.31 T
+(-operable software components.) 256.68 533.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The ORB interface is speci\336ed in the Common Object Request Broker Architec-) 198 265.8 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ture \050CORBA\051 speci\336cation which de\336nes the Interface De\336nition Language) 198 253.8 T
+0 0 0 1 0 0 0 K
+72 140.98 522 635.98 C
+204.55 286.47 522 529.98 C
+0 0 0 1 0 0 0 K
+4 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(Object Management Architecture) 288.26 295.09 T
+210.55 460.43 345.64 523.98 18 RR
+7 X
+V
+0.5 H
+2 Z
+0 X
+N
+380.88 460.43 515.98 523.98 18 RR
+7 X
+V
+0 X
+N
+210.55 327.58 515.98 391.12 18 RR
+7 X
+V
+0 X
+N
+210.55 402.67 515.98 448.88 R
+7 X
+V
+0 X
+N
+7 X
+90 450 11.75 11.55 251.67 483.54 G
+0 X
+90 450 11.75 11.55 251.67 483.54 A
+7 X
+90 450 11.75 11.55 304.53 483.54 G
+0 X
+90 450 11.75 11.55 304.53 483.54 A
+7 X
+90 450 11.75 11.55 275.16 368.01 G
+0 X
+90 450 11.75 11.55 275.16 368.01 A
+7 X
+90 450 11.75 11.55 422 483.54 G
+0 X
+90 450 11.75 11.55 422 483.54 A
+7 X
+90 450 11.75 11.55 363.26 368.01 G
+0 X
+90 450 11.75 11.55 363.26 368.01 A
+421.99 356.46 457.24 379.56 R
+7 X
+V
+0 X
+N
+457.24 471.99 492.48 495.09 R
+7 X
+V
+0 X
+N
+251.67 471.99 251.67 448.88 2 L
+4 H
+N
+304.53 471.99 304.53 448.88 2 L
+N
+421.99 471.99 421.99 448.88 2 L
+N
+474.86 471.99 474.86 448.88 2 L
+N
+439.62 402.67 439.62 379.56 2 L
+N
+363.26 402.67 363.26 379.56 2 L
+N
+275.16 402.67 275.16 379.56 2 L
+N
+(Application Objects) 228.17 505.15 T
+(Common Facilities) 402.73 507.65 T
+(Object Request Broker) 310.4 416.4 T
+(Object Services) 324.45 335.53 T
+0 0 0 1 0 0 0 K
+72 140.98 522 635.98 C
+0 -208 1000 792 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "2" 2
+%%Page: "3" 3
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-3) 518 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(Introduction) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(\050IDL\051, the C/C++/Smalltalk Language Mappings, the Dynamic Invocation Inter-) 216 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(face, the Interface Repository) 216 611.33 T
+(, and ORB Programming Interfaces.) 333.64 611.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The IDL language is used to de\336ne object interfaces in a language-neutral man-) 216 357.44 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ner) 216 345.44 T
+(.  IDL describes the interfaces that clients call and object implementations) 228.22 345.44 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.23 (provide.  IDL is declarative, describing the set of possible operations that a client) 216 333.44 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.14 (may request of an object.  IDL speci\336cations can include interface \050object\051 decla-) 216 321.44 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(rations, constant and type declarations, attributes declarations, operation declara-) 216 309.44 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tions, exception declarations, and module declarations.) 216 297.44 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(This is an example IDL speci\336cation for an object interface:) 216 273.44 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(interface Animal {) 216 256.1 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   // This is the interface to an animal object.) 216 246.1 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   enum State {SLEEPING, AWAKE};) 216 226.1 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   // A simple indication of an animals state.) 216 216.1 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   boolean eat\050inout Feed bag\051;) 216 196.1 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   // Requests that the animal object eat the food in the) 216 186.1 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   // specified bag.) 216 176.1 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   // Returns true is animal is full.) 216 166.1 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   attribute State alertness;) 216 146.1 T
+0 0 0 1 0 0 0 K
+90 135 540 630 C
+234.58 378.1 540 608 C
+0 0 0 1 0 0 0 K
+240.58 564.03 343.09 602 18 RR
+7 X
+0 0 0 1 0 0 0 K
+V
+1 H
+2 Z
+0 X
+N
+354.48 564.03 513.95 602 18 RR
+7 X
+V
+0 X
+N
+4 12 Q
+(CLIENT) 270.95 577.04 T
+240.58 404.57 513.95 446.34 R
+7 X
+V
+0 X
+N
+240.58 453.93 297.53 495.69 R
+7 X
+V
+0 X
+N
+(Dynamic) 250.56 476.06 T
+305.12 453.93 343.09 495.69 R
+7 X
+V
+0 X
+N
+(Stubs) 309.61 466.46 T
+350.68 453.93 403.84 495.69 R
+7 X
+V
+0 X
+N
+(ORB) 366.71 476.06 T
+(Interface) 358.28 466.25 T
+411.43 453.93 513.95 453.93 513.95 495.69 468.39 495.69 468.39 461.52 411.43 461.52 6 Y
+7 X
+V
+0 X
+N
+(Object) 475.98 477.85 T
+(Adapter) 472.18 466.46 T
+411.43 465.32 464.59 495.69 R
+7 X
+V
+0 X
+N
+(Skeleton) 419.03 470.04 T
+277.57 522.56 270.95 499.49 264.34 522.56 270.95 522.56 4 Y
+V
+270.95 564.03 270.95 522.56 2 L
+4 H
+N
+318.87 523.45 320.31 499.49 306.39 519.05 312.63 521.25 4 Y
+V
+297.53 564.03 312.63 521.24 2 L
+N
+355.09 522.45 362.07 499.49 343.99 515.27 349.54 518.86 4 Y
+V
+320.31 564.03 349.54 518.86 2 L
+N
+387.68 522.56 381.06 499.49 374.45 522.56 381.06 522.56 4 Y
+V
+381.06 564.03 381.06 522.56 2 L
+N
+431.4 537.17 438.01 560.24 444.63 537.17 438.01 537.17 4 Y
+V
+438.01 495.69 438.01 537.17 2 L
+N
+476.96 537.17 483.58 560.24 490.19 537.17 483.58 537.17 4 Y
+V
+483.58 495.69 483.58 537.17 2 L
+N
+505.38 522.56 498.76 499.49 492.15 522.56 498.76 522.56 4 Y
+V
+498.76 564.03 498.76 522.56 2 L
+N
+(Usage) 308.92 477.85 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Impl.) 427.46 479.86 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(OBJECT IMPLEMENT) 357.54 581.52 T
+(A) 477.34 581.52 T
+(TION) 484.45 581.52 T
+(Common Object Request Broker Architecture) 268.79 388.4 T
+4 24 Q
+(ORB CORE) 315.04 423.4 T
+4 12 Q
+(Invocation) 243.38 463.4 T
+0 0 0 1 0 0 0 K
+90 135 540 630 C
+36 72 576 720 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "3" 3
+%%Page: "4" 4
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(Introduction) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-4) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(   // This is the current state of the animal.) 198 629.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(};) 198 619.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 10 Q
+(How do SOM and) 72 585.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CORBA relate?) 72 574.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(SOM provides a wide range of object capabilities.  Some of these capabilities) 198 585.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(include support for the CORBA speci\336cation.) 198 573.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.2 (SOM provides a CORBA-compliant Object Request Broker and Interface Repos-) 198 549.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.17 (itory) 198 537.31 P
+-0.17 (, known as DSOM.  DSOM provides transparent access to objects located in) 216.24 537.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(dif) 198 525.31 T
+(ferent address spaces throughout the connected network.  The IBM SOM) 208.93 525.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Compiler translates IDL speci\336cations into CORBA-compliant language bind-) 198 513.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ings for objects.) 198 501.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(What are bindings?) 72 223.32 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(The CORBA speci\336cation de\336nes two language dependent bindings that will be) 198 223.32 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(generated from the IDL speci\336cation for an object interface: the usage stub and) 198 211.32 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the implementation skeleton.  The usage stub is the programming interface used) 198 199.32 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(by clients to make requests of objects. The implementation skeleton is the pro-) 198 187.32 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(gramming interface used by the ORB to invoke the object implementation to sat-) 198 175.32 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(isfy client requests.) 198 163.32 T
+0 0 0 1 0 0 0 K
+72 140.98 522 635.98 C
+204.55 255.98 522 497.98 C
+0 0 0 1 0 0 0 K
+210.55 447 282.42 491.98 R
+1 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+4 12 Q
+(Client) 229.34 462.19 T
+268.94 347.04 345.3 402.02 R
+N
+(DSOM) 291.4 364.59 T
+255.47 262.08 363.26 297.07 17.49 RR
+N
+372.24 262.08 484.53 297.07 17.49 RR
+N
+444.11 447 515.98 491.98 R
+N
+(Server) 462.73 462.19 T
+(Interface) 282.42 279.63 T
+(Repository) 277.92 264.64 T
+(Implementation) 390.21 282.27 T
+(Repository) 403.69 267.28 T
+431.93 317.25 426.14 297.07 420.36 317.25 426.14 317.25 4 Y
+V
+426.14 347.04 426.14 317.25 2 L
+3 H
+N
+315.15 317.25 309.36 297.07 303.58 317.25 309.36 317.25 4 Y
+V
+309.36 347.04 309.36 317.25 2 L
+N
+J
+281.23 420.39 291.4 402.02 273.04 412.21 277.13 416.3 4 Y
+V
+J
+246.48 447 277.14 416.3 2 L
+J
+246.48 447 248.25 445.23 2 L
+N
+[5.186 9.335] 5.186 I
+248.25 445.23 275.37 418.07 2 L
+N
+J
+275.37 418.07 277.14 416.3 2 L
+N
+J
+460.83 438.51 480.03 447 468.24 429.62 464.54 434.07 4 Y
+V
+J
+464.54 434.06 426.14 402.02 2 L
+J
+464.54 434.06 462.62 432.46 2 L
+N
+[4.413 7.944] 4.413 I
+462.62 432.46 428.06 403.62 2 L
+N
+J
+428.06 403.62 426.14 402.02 2 L
+N
+J
+(DSOM) 403.69 364.59 T
+385.72 347.04 462.08 402.02 R
+1 H
+N
+370.36 315.04 381.23 297.07 362.49 306.55 366.43 310.79 4 Y
+V
+327.33 347.04 366.43 310.79 2 L
+3 H
+N
+373.02 306.55 354.28 297.07 365.15 315.04 369.08 310.79 4 Y
+V
+408.18 347.04 369.08 310.79 2 L
+N
+J
+360.09 377.82 380.28 372.03 360.09 366.24 360.09 372.03 4 Y
+N
+J
+345.3 372.03 360.09 372.03 2 L
+J
+345.3 372.03 345.8 372.03 2 L
+N
+[0.811 4.057] 0.811 I
+345.8 372.03 359.59 372.03 2 L
+N
+J
+359.59 372.03 360.09 372.03 2 L
+N
+0 0 0 1 0 0 0 K
+J
+72 140.98 522 635.98 C
+36 72 576 720 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "4" 4
+%%Page: "5" 5
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-5) 518 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(Introduction) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(The IBM SOM Compiler is used to translate IDL speci\336cations into language-) 216 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.16 (speci\336c bindings.  PowerAda provides two Ada95 Emitters for use with the IBM) 216 611.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.24 (SOM Compiler) 216 599.33 P
+-0.24 (.  The usage stub emitter produces Ada95 bindings \050package spec-) 277.16 599.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.3 (i\336cations and bodies\051 from IDL that form the Ada95 interface to the object that is) 216 587.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(called by clients.  The implementation skeleton emitter produces bindings \050pack-) 216 575.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(age speci\336cations and bodies\051 that form the implementation of the object that is) 216 563.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(called by the ORB to satisfy requests.) 216 551.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(What is the IDL-to-) 90 273.41 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Ada95 mapping?) 90 262.41 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(The Ada95 mapping de\336nes how IDL constructs in an IDL speci\336cation for an) 216 273.41 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(object will be mapped to Ada95 constructs in the Ada95 language bindings for) 216 261.41 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the object.  IDL interfaces map to Ada95 child packages containing a tagged) 216 249.41 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(type.  IDL constants map to Ada95 constants.  IDL types map to Ada95 types or) 216 237.41 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(generic instantiations for sequences and string types.  IDL exceptions map to) 216 225.41 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Ada95 exceptions with occurrence data.  IDL attributes and operations map to) 216 213.41 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Ada95 primitive subprograms.) 216 201.41 T
+0 0 0 1 0 0 0 K
+90 135 540 630 C
+217.08 306.08 540 548 C
+0 0 0 1 0 0 0 K
+257.02 502.21 329.13 542 R
+1 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+223.08 409.37 299.43 440.32 15.47 RR
+N
+[7 7] 0 I
+223.08 312.1 346.1 351.9 18 RR
+N
+[7.068 7.068] 0 I
+375.79 312.1 528.5 351.9 18 RR
+N
+J
+422.45 409.37 528.5 440.32 15.47 RR
+N
+320.64 409.37 363.07 440.32 R
+7 X
+V
+0.5 H
+0 X
+N
+367.31 409.37 409.73 440.32 R
+7 X
+V
+0 X
+N
+371.55 413.79 413.97 444.74 R
+7 X
+V
+0 X
+N
+375.79 418.21 418.21 449.16 R
+7 X
+V
+0 X
+N
+315.93 414.28 358.35 445.23 R
+7 X
+V
+0 X
+N
+312.16 418.21 354.58 449.16 R
+7 X
+V
+0 X
+N
+439.42 502.21 511.53 542 R
+1 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 12 Q
+(IDL) 286.71 524.38 T
+(Repository) 452.15 417.81 T
+(Repository) 240.05 417.81 T
+(Stubs) 320.64 427.11 T
+(Client) 273.51 325.43 T
+272.18 458.26 261.26 440.32 261.01 461.32 266.59 459.79 4 Y
+V
+278.23 502.21 266.59 459.78 2 L
+3 H
+N
+326.28 468.93 333.37 449.16 316.88 462.16 321.58 465.55 4 Y
+V
+295.19 502.21 321.58 465.54 2 L
+N
+382.95 464.77 397 449.16 376.82 454.95 379.88 459.86 4 Y
+V
+312.16 502.21 379.89 459.86 2 L
+N
+267.05 372.08 261.26 351.9 255.47 372.08 261.26 372.08 4 Y
+V
+261.26 409.37 261.26 372.08 2 L
+N
+326.57 367.18 312.16 351.9 316.28 372.49 321.42 369.83 4 Y
+V
+341.86 409.37 321.43 369.83 2 L
+N
+411.08 372.7 413.97 351.9 400.5 368.01 405.79 370.36 4 Y
+V
+388.52 409.37 405.8 370.35 2 L
+N
+(Installation) 452.15 511.11 T
+479.14 460.5 473.36 440.32 467.57 460.5 473.36 460.5 4 Y
+V
+473.36 502.21 473.36 460.5 2 L
+N
+479.14 372.08 473.36 351.9 467.57 372.08 473.36 372.08 4 Y
+V
+473.36 409.37 473.36 372.08 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(De\336nitions) 262.08 512 T
+(Skeletons) 370.08 431 T
+(Implementation) 433.08 431 T
+(Object Implementation) 389.63 327.27 T
+(Interface) 242.13 431.65 T
+(Implement.) 453.38 526.65 T
+0 0 0 1 0 0 0 K
+90 135 540 630 C
+36 72 576 720 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "5" 5
+%%Page: "6" 6
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(Using Class Libraries) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-6) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(The speci\336cation of this mapping is currently in progress.  The PowerAda emit-) 198 629.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ters produce bindings that do not completely comply with the current mapping.) 198 617.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Further Reading) 72 581.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(The following background references are recommended reading.) 198 581.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 198 563.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(The Common Object Request Br) 216 563.31 T
+(oker: Ar) 345.06 563.31 T
+(chitectur) 378.29 563.31 T
+(e and Speci\336cation) 413.47 563.31 T
+3 F
+( avail-) 489.57 563.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(able from Object Management Group, Inc.) 216 552.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 198 535.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+-0.63 (SOMobjects Developer T) 216 535.31 P
+-0.63 (oolkit -- An Overview) 314.91 535.31 P
+3 F
+-0.63 ( available from IBM Corp. and) 399.4 535.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(provided as softcopy in this distribution.) 216 524.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 198 507.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+-0.59 (Pr) 216 507.31 P
+-0.59 (oposed IDL-Ada9X Language Mapping Speci\336cation) 225.63 507.31 P
+3 F
+-0.59 ( provided as softcopy) 436.04 507.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.1 (in this distribution.  As revisions become available, they can be downloaded) 216 496.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(via anonymous ftp from ocsystems.com.) 216 485.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 198 468.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(SOMobjects Developer T) 216 468.31 T
+(oolkit Users Guide) 316.17 468.31 T
+3 F
+( available from IBM Corp.) 391.72 468.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 11 Q
+(Using Class Libraries) 72 438.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(The \336rst step in using a class library from Ada is to generate the Ada95 usage) 198 438.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.17 (stub binding from the IDL speci\336cation.  Then the usage stub bindings should be) 198 426.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.18 (compiled and linked with the client program; they require no modi\336cation by the) 198 414.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(user) 198 402.64 T
+(.  This section describes this process.) 214.11 402.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Generating Interface) 72 366.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stub Bindings) 72 355.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.07 (T) 198 366.64 P
+-0.07 (o use a class library from an Ada program you must generate \050and compile\051 the) 203.41 366.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(interface stub bindings from the IDL speci\336cation.  T) 198 354.64 T
+(o generate Ada95 interface) 410.88 354.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.15 (stub bindings specify the) 198 342.64 P
+5 9 Q
+-0.32 (ada) 299.64 342.64 P
+3 10 Q
+-0.15 ( emitter on the SOM compiler command line as fol-) 315.83 342.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(lows:) 198 330.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(sc -sada my_file.idl) 216 313.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(This will produce a bindings \336le) 198 290.64 T
+5 9 Q
+( my_file.ada) 327.72 290.64 T
+3 10 Q
+(.) 392.52 290.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The SOM Compiler uses the LIBP) 198 266.64 T
+(A) 335.69 266.64 T
+(TH environment variable to \336nd the emitter) 341.8 266.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\050) 198 254.64 T
+5 9 Q
+(emitada.dll) 201.33 254.64 T
+3 10 Q
+(\051 and uses the SMINCLUDE environment variable to \336nd the) 260.73 254.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(emitter template \336le \050) 198 242.64 T
+5 9 Q
+(ada.efw) 284.38 242.64 T
+3 10 Q
+(\051.  Both are required.) 322.18 242.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Interface Stub Bindings) 72 206.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Contents) 72 195.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.09 (Object interfaces in IDL are mapped to Ada packages to contain the declarations) 198 206.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(associated with an object interface.  W) 198 194.64 T
+(ithin the package is a tagged type, named) 352.28 194.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.25 (\322Ref\323, that is the object reference type and is used to declare object variables that) 198 182.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.41 (refer to actual objects.  The object reference type provides for \050single\051 inheritance) 198 170.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(between object interfaces that parallels the IDL inheritance.) 198 158.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "6" 6
+%%Page: "7" 7
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-7) 518 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(Using Class Libraries) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(In Ada, object variables are wrappers for the SOM object pointer) 216 623.33 T
+(.  An object) 475.66 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(variable is generally used to invoke a method on an object instance.  It is pro-) 216 611.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.09 (vided as the \336rst parameter to the method subprogram call and designates the tar-) 216 599.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(get object.  The object variable may also be used to perform a SOM-speci\336c) 216 587.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(function.  In this case the \322som_object\323 component of the tagged type should be) 216 575.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(referenced.  This component is a SOM object pointer) 216 563.33 T
+(, which is required in most) 428.06 563.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(SOM calls.) 216 551.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.28 (Object variables can be initialized in two ways.  The \336rst way is to directly create) 216 527.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(an object instance using the \322New_Instance\323 subprogram declared in the object) 216 515.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(interface package.  The object instance can be destroyed by calling the) 216 503.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\322Free_Instance\323 subprogram.  The second way to create an object reference is) 216 491.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(from a SOM object pointer using the \322T) 216 479.33 T
+(o_Ref\323 subprogram of the resulting) 375.56 479.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(object interface package.  This method converts SOM object pointers returned) 216 467.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.15 (from methods to the desired Ada wrapper type while verifying the validity of the) 216 455.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(conversion.) 216 443.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.34 (The object interface package also contains some SOM-speci\336c declarations.  The) 216 419.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.18 (major and minor version numbers speci\336ed in the IDL are translated to constants) 216 407.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(in the object interface package. Access to the class initialization function is pro-) 216 395.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(vided by the \322New_Class\323 subprogram declaration.) 216 383.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.26 (All the declarations in an IDL object interface are translated to the corresponding) 216 359.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Ada declaration within the object interface package. IDL constant declarations) 216 347.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(are translated to Ada constant declarations. IDL type declarations are translated) 216 335.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.21 (to Ada type declarations or generic instantiations for sequence and string declara-) 216 323.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tions.  IDL exception declarations are translated to Ada exception declarations) 216 311.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(with a record declaration to describe exception occurrence data.) 216 299.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(IDL attribute declarations are translated to a pair of Ada subprogram declara-) 216 275.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tions.  A \322get\323 subprogram retrieves the value of the associated attribute and a) 216 263.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.41 (\322put\323 subprogram modi\336es the value of the attribute.   The \322put\323 subprogram will) 216 251.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(not be present if the attribute was speci\336ed as \322readonly\323.) 216 239.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(IDL operation declarations are translated to Ada subprogram declarations. The) 216 215.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\336rst parameter of the subprogram will be the object variable that designates the) 216 203.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "7" 7
+%%Page: "8" 8
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(Implementing Class Libraries) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-8) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(tar) 198 629.31 T
+(get object.  The remaining ar) 208.37 629.31 T
+(guments represent the implicit and explicit) 323.72 629.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method parameters.) 198 617.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Compiling and Linking) 72 581.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(This section describes how to compile and link a client program written in Ada.) 198 581.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.05 (Compiling and linking a client program can be done in one of two ways, depend-) 198 569.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ing on how the class is packaged.) 198 557.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If the class is not packaged in a class library \050the source for the implementation) 198 533.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(of the object class is available\051 then the client program and the object class) 198 521.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(implementation can be compiled and linked together \050statically\051 in the same exe-) 198 509.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.03 (cutable.  The object class should be compiled separately from the Ada client pro-) 198 497.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(gram and included during the bind step:) 198 485.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(xlc -I. -I$SOMBASE/include hello.c   #) 198 467.98 T
+6 F
+(compile class in C) 408.6 467.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(ada client_program.ada               #) 198 457.98 T
+6 F
+(compile client in Ada) 408.6 457.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(ada -o my_program -b client_main -i hello.o  #) 198 447.98 T
+6 F
+(bind Ada main) 451.8 447.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(                                             #) 198 437.98 T
+6 F
+(including C) 451.8 437.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(If the object class is packaged as a class library then the \322import library\323 pro-) 198 415.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(vided with the class library should be included in the bind step of the client pro-) 198 403.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(gram to resolve references to the class library:) 198 391.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(ada client_program.ada   #) 198 373.98 T
+6 F
+(compile client in Ada) 343.8 373.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(ada -o my_program -b client_main -i libhello.a) 198 363.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(                         #) 198 353.98 T
+6 F
+(bind Ada main including li) 343.8 353.98 T
+5 F
+(b) 484.2 353.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 11 Q
+(Implementing Class) 72 324.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Libraries) 72 310.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(The \336rst step in implementing a class library in Ada is to generate the Ada95) 198 324.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(implementation skeleton binding from the IDL speci\336cation. Then the imple-) 198 312.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.1 (mentation skeleton binding should be modi\336ed to include the object implementa-) 198 300.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.33 (tion.  The full implementation should be compiled and linked \050statically\051 with the) 198 288.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(client program.  This section describes this process.) 198 276.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(NOTE:) 198 258.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(The Ada95 Implementation Skeleton Emitter will) 252 258.64 T
+0 F
+(OVER-) 453.1 258.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.4 (WRITE) 252 247.64 P
+3 F
+-0.4 ( any existing binding file.  It does not update the file as) 286.45 247.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the C/C++ Emitters do.  You have been warned.) 252 236.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(NOTE:) 198 219.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.62 ( Classes implemented in Ada can only be used in Ada client pro-) 252 219.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(grams or in special Ada object implementation servers.  They) 252 208.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "8" 8
+%%Page: "9" 9
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-9) 518 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(Implementing Class Libraries) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(cannot be used from C/C++ clients.) 270 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Generating) 90 588.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Implementation) 90 577.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Skeleton Bindings) 90 566.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(T) 216 588.33 T
+(o implement a class library in Ada you must generate \050and compile\051 the imple-) 221.41 588.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(mentation skeleton bindings from the IDL speci\336cation.  T) 216 576.33 T
+(o generate Ada95) 450.56 576.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(implementation skeleton bindings specify the \322adai\323 emitter on the SOM com-) 216 564.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(piler command line as follows:) 216 552.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(sc -sadai my_file.idl) 234 535 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(This will produce a bindings \336le) 216 512.33 T
+5 9 Q
+(my_file.adai) 348.22 512.33 T
+3 10 Q
+(.) 413.02 512.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The SOM Compiler uses the LIBP) 216 488.33 T
+(A) 353.69 488.33 T
+(TH environment variable to \336nd the emitter) 359.8 488.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\050) 216 476.33 T
+5 9 Q
+(emitadai.dll) 219.33 476.33 T
+3 10 Q
+(\051 and uses the SMINCLUDE environment variable to \336nd the) 284.13 476.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(emitter template \336le \050) 216 464.33 T
+5 9 Q
+(adai.efw) 302.38 464.33 T
+3 10 Q
+(\051.  Both are required.) 345.58 464.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Implementation) 90 428.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Skeleton Contents) 90 417.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.08 (Object interfaces in IDL are mapped to Ada packages to contain the implementa-) 216 428.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tion of an object interface.  The object implementation packages in the bindings) 216 416.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(will not be referred to directly by the client program.  Instead, SOM will direct) 216 404.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.22 (requests made of the interface stub bindings to the appropriate subprogram in the) 216 392.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(implementation skeleton.) 216 380.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The object implementation package contains a number of data structures that) 216 356.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(describe the class.  These data structures are used by the \322New_Class\323 subpro-) 216 344.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(gram to register the class with SOM.  The \322New_Class\323 subprogram also initial-) 216 332.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(izes all the classes required by the current class.  No user modi\336cation of these) 216 320.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(parts is required.) 216 308.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The object implementation package also contains a declaration of the object) 216 284.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(instance data.  The object instance data includes the attribute data \050unless) 216 272.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.29 (\322nodata\323 is used\051 and any instance declarations in the implementation statement.) 216 260.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.03 (The object instance data is referenced and modi\336ed by the methods of the object) 216 248.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(class.  The object instance data structure of an object instance can be accessed) 216 236.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(using the \322somThis\323 local variable which is initialized by calling the) 216 224.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\322Get_InstanceData\323 subprogram.) 216 212.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(For each attribute declaration in the IDL speci\336cation, a \322get\323 and \322set\323 subpro-) 216 188.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(gram will be generated, unless the attribute is \322readonly\323 in which case no \322set\323) 216 176.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(operation is generated.  For ordinary attribute types the \322get\323 and \322set\323 subpro-) 216 164.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(grams can be left unchanged.  If the attribute value is string or pointer type then) 216 152.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the \322noget\323 and \322noset\323 modi\336ers should be used to generate skeleton subpro-) 216 140.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "9" 9
+%%Page: "10" 10
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(Implementing Class Libraries) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-10) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(grams \050like normal operations below\051 rather than the default attribute subpro-) 198 629.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(grams.) 198 617.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.05 (For each operation declared in the IDL speci\336cation, a skeleton subprogram will) 198 593.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(be generated.  The skeleton must be \336lled in by the implementor) 198 581.31 T
+(.) 455.2 581.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Implementing SOM) 72 545.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Objects In Ada) 72 534.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(T) 198 545.31 T
+(o implement SOM Objects in Ada, a shared module must be created. This can) 203.41 545.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(be easily done with the \322-s\323 compiler switch, which binds a main program as a) 198 533.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(shared module instead of an executable.  The steps involved in this process are:) 198 521.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 198 503.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Generate the Ada Impl code by invoking \322sc -sadai\323 on the .idl file.) 216 503.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 198 486.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Complete the implementation of the class by adding code to the resulting) 216 486.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Impl \050.adai\051 file.) 216 475.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 198 458.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Create a main program for binding the class.) 216 458.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 198 441.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Compile and bind the shared module.) 216 441.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The resulting shared module can then act as a class implementation for any lan-) 198 418.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (guage, or for distributed applications.  \050Some restrictions may apply to the use of) 198 406.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Ada features in shared modules; consult the README \336le for your version of) 198 394.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(PowerAda or contact us at) 198 382.31 T
+5 9 Q
+(ocstools@ocsystems.com) 306.03 382.31 T
+3 10 Q
+(.\051  An example of this) 424.83 382.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(process is provided online in the) 198 370.16 T
+1 1 0 0 0 0 1 K
+1 1 0 0 0 0 1 K
+("Simple SOM Demo") 330.21 370.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(.) 417.82 370.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(Generate The Implementation Skeleton) 198 346.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(The following command:) 198 323.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(   sc -sadai hello.idl) 198 305.82 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+-0.28 (will create an Ada Impl \336le named \322hello.adai\323 with \322null\323 bodies for each of the) 198 283.16 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(interfaces named in the IDL \336le.  Y) 198 271.16 T
+(ou must edit the body\050ies\051 of these subpro-) 339.19 271.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(grams to insert the implementations.) 198 259.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(Compile the Implementation) 198 235.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Ada Impl \336les must be compiled with checks suppressed; always specify the -S) 198 212.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(compiler option.  W) 198 200.16 T
+(ithout checks suppressed, Program_Error may be raised for) 278.15 200.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(elaboration check.  Only the Impl \050.adai\051 need be compiled with checks sup-) 198 188.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(pressed:  units called by the Impl can have exception checking enabled.  This) 198 176.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(restriction will be removed in a future release of PowerAda.) 198 164.16 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "10" 10
+%%Page: "11" 11
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-1) 512.66 99.58 T
+(1) 534 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(Implementing Class Libraries) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(No other special processing is required for Impl \336les.) 216 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(Create a Main Program for the Class) 216 599.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Use the following main program as a \322template\323 with which to bind your class) 216 576.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(implementation.  Substitute every occurrence of \322Hello\323 with the name of the) 216 564.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(class.) 216 552.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(   procedure SOMInitModule;) 216 535 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   pragma Export \050SOMInitModule,\323.SOMInitModule\323\051;) 216 525 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   with Som;) 216 511 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   with Hello_Impl;) 216 501 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   with System;) 216 491 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   procedure SOMInitModule is) 216 481 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(  procedure AdaInit;) 216 471 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(  pragma Interface\050 C, AdaInit \051;) 216 461 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(begin) 216 451 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(  declare) 216 441 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(    Dummy_Class:  SOM.SOMClassPtr;) 216 431 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(  begin) 216 421 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(    Dummy_Class := Hello_Impl.New_Class\050) 216 411 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(       Hello_Impl.Major_Version, Hello_Impl.Minor_Version\051;) 216 401 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(  end;) 216 391 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(end SOMInitModule;) 216 381 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(\050In following example, assume that this subprogram is contained in the \336le \322init-) 216 358.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(mod.ada\323.\051) 216 346.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(Bind the Shared Module) 216 322.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Binding the class implementation as a shared module is very much like binding) 216 299.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(an executable program, with two additions:  the -s switch is speci\336ed and the) 216 287.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(exports list is passed to the linker) 216 275.33 T
+(.) 348.78 275.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.34 (The exports list is created by invoking the SOM compiler on the IDL \336le with the) 216 251.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(option \322-sexp\323:) 216 239.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(  sc -sexp hello.idl) 216 222 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(An exports \336le \322hello.exp\323 is created.  This is a text \336le which names the entry) 216 199.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(points provided by the shared module.  It is passed to the linker by specifying) 216 187.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\322-) 216 175.33 T
+(i-) 223.77 175.33 T
+(bE:hello.exp\323.  This adds the string \322-bE:hello.exp\323 to the linker options.) 229.88 175.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Note that no whitespace can appear between \322-) 216 163.33 T
+(i\323 and \322-) 403.99 163.33 T
+(bE:hello.exp\323, or the) 438.42 163.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(linker) 216 151.33 T
+(\325) 239.7 151.33 T
+(s \322-) 242.48 151.33 T
+(b\323 \337ag will be interpreted as a compiler option.) 256.64 151.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "11" 11
+%%Page: "12" 12
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(Required Setup) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-12) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(In this case, the following command might be used to create the shared module:) 198 629.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(   ada -sm initmod.ada -o hello.dll -i-bE:hello.exp) 198 611.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(Finally) 198 589.31 T
+(, the exports \336le is added to an archive \336le:) 225.69 589.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(   ar ruv libhello.a hello.exp) 198 571.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 11 Q
+(Requir) 72 542.64 T
+(ed Setup) 104.8 542.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(This section describes how to setup your environment to use the PowerAda) 198 542.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Ada95 Emitters.) 198 530.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+-0.19 (Required SOM Products) 72 494.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.3 (T) 198 494.64 P
+-0.3 (o build and use SOM classes you will have to install optional IBM products.  T) 203.41 494.64 P
+-0.3 (o) 514.8 494.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(build class libraries and statically link them with programs you will need) 198 482.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(SOMObjects Developer T) 198 470.64 T
+(oolkit for AIX/6000) 300.39 470.64 T
+3 F
+(. T) 378.17 470.64 T
+(o use object servers and dynami-) 388.58 470.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(cally link class libraries within a single machine you will need) 198 458.64 T
+2 F
+(SOMObjects) 449.92 458.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.2 (W) 198 446.64 P
+-0.2 (orkstation Enabler for AIX/6000) 205.41 446.64 P
+3 F
+-0.2 (.  T) 335.09 446.64 P
+-0.2 (o Distribute objects across the network you) 347.6 446.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(will need) 198 434.64 T
+2 F
+(SOMObjects W) 237.44 434.64 T
+(orkgr) 298.45 434.64 T
+(oup Enabler for AIX/6000) 320.3 434.64 T
+3 F
+(.) 425.02 434.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(User Environment) 72 398.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(T) 198 398.64 T
+(o setup you environment for the SOM product, invoke the SOM setup script) 203.41 398.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(/usr/lpp/som/bin/somenv.sh) 198 386.64 T
+3 10 Q
+( \050or) 338.4 386.64 T
+5 9 Q
+(somenv.csh) 355.06 386.64 T
+3 10 Q
+( for csh users\051.) 409.06 386.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Y) 198 362.64 T
+(ou will need to add the SOM bin directory to your P) 204.22 362.64 T
+(A) 411.9 362.64 T
+(TH:) 418.01 362.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(export PATH=/usr/lpp/som/bin:$PATH) 216 345.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(T) 198 322.64 T
+(o use the Ada95 Emitters with the SOM Compiler add the path of the Pow-) 203.41 322.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(erAda emitters to the LIBP) 198 310.64 T
+(A) 305.4 310.64 T
+(TH environment variable:) 311.51 310.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(export LIBPATH=$POWERADA/lib:$LIBPATH) 216 293.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+-0.04 (Note that if LIBP) 198 270.64 P
+-0.04 (A) 266.68 270.64 P
+-0.04 (TH was empty previously then) 272.79 270.64 P
+5 9 Q
+-0.09 (/usr/lib) 398.41 270.64 P
+3 10 Q
+-0.04 ( should be included) 441.61 270.64 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(in the LIBP) 198 258.64 T
+(A) 243.75 258.64 T
+(TH as well:) 249.86 258.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(export LIBPATH=$LIBPATH:/usr/lib) 216 241.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(T) 198 218.64 T
+(o use the Ada95 Emitters you must also add the path of the emitter template) 203.41 218.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\336les to the SMINCLUDE environment variable:) 198 206.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "12" 12
+%%Page: "13" 13
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-13) 512 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(Required Setup) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(export SMINCLUDE=$POWERADA/lib:$SMINCLUDE) 234 624 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 10 Q
+(SOM Toolkit Bindings) 90 589.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Bindings for the SOM T) 216 589.33 T
+(oolkit and SOM Frameworks are pre-compiled in the) 313.08 589.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.3 (SOM sublibrary) 216 577.33 P
+-0.3 (.  These bindings should be suf) 279.77 577.33 P
+-0.3 (\336cient for most users. Y) 401.98 577.33 P
+-0.3 (ou can use) 496.18 577.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the PowerAda Unit Browser to examine the source for the bindings.) 216 565.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If required, you can generate the Ada95 bindings from the SOM IDL yourself.) 216 541.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Some of the generated bindings require modi\336cation to work around compiler) 216 529.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(and emitter problems.) 216 517.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(First generate the Ada95 bindings from the SOM IDL with the following two) 216 493.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(commands:) 216 481.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(sc -sada -mtypeprefix=SOM /usr/lpp/som/include/*.idl) 216 463.85 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(sc -sada -mtypeprefix=SCTypes /usr/lpp/som/include/sc*.idl) 216 453.85 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(Now you need to make the workaround changes:) 216 431.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 216 413.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.2 (The body of package SOMObject in file) 234 413.18 P
+5 9 Q
+-0.43 (somobj.ada) 396.18 413.18 P
+3 10 Q
+-0.2 ( must be removed and) 450.18 413.18 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(placed in a file named) 234 402.18 T
+5 9 Q
+(somobj.ada.body) 324.81 402.18 T
+3 10 Q
+(.) 405.81 402.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 216 385.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(A local subtype must be declared to rename an external type that is a homo-) 234 385.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(graph of the subprogram \322sompstat\323 in package SOMPAsciiMediaInterface) 234 374.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(in file) 234 363.18 T
+5 9 Q
+(fmi.ada) 260.11 363.18 T
+3 10 Q
+(.) 297.91 363.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 216 346.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Anonymous sequence types in IDL structs cause referencing problems in) 234 346.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(package OperationDef in file) 234 335.18 T
+5 9 Q
+(operatdf.ada) 352.85 335.18 T
+3 10 Q
+(.) 417.65 335.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Refer to the version of these \336les in the distribution for the appropriate correc-) 216 312.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tions.) 216 300.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Next, generate a compilation order for the bindings \336les:) 216 276.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(asrcdep -c *.ada *.body > COMPORDER) 216 258.85 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(Finally) 216 236.18 T
+(, compile the bindings \336les \050into a new sublibrary\051:) 243.69 236.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(ada -vI < COMPORDER) 216 218.85 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(The bindings are now ready to use.) 216 196.18 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "13" 13
+%%Page: "14" 14
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(PowerAda SOM Support) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-14) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 11 Q
+(PowerAda SOM) 72 628.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Support) 72 614.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(This section describes the PowerAda SOM support.) 198 628.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(IDL-to-Ada95) 72 578.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Language Mapping) 72 567.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.23 (The following is a summary of how IDL features are handled by the Ada95 Emit-) 198 578.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ters.) 198 566.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Include dir) 198 542.31 T
+(ectives) 245.33 542.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Fully supported.) 216 524.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Integral types \050mapping deviation\051) 198 501.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.28 (Types short and long are fully supported.  Unsigned \050modular\051 types are) 216 483.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(not supported by the Ada compiler so they are mapped to signed types.) 216 472.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Floating point types) 198 449.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Both float and double types are fully supported.) 216 431.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Character type) 198 408.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Fully supported as Standard.Character.) 216 390.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Boolean type) 198 367.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Fully supported as Standard.Boolean.) 216 349.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Octet type \050mapping deviation\051) 198 326.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported as a signed 8-bit type.) 216 308.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Any type) 198 285.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported as record containing a Typecode and a pointer to the value.) 216 267.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Enum types) 198 244.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Fully supported as Ada enumeration types.) 216 226.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Struct types) 198 203.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported as Ada record types.) 216 185.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Self-referential structs using sequences are not supported.) 216 168.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Union types) 198 145.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "14" 14
+%%Page: "15" 15
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-15) 512 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(PowerAda SOM Support) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(Supported as Ada variant record types.) 234 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Self-referential unions using sequences are not supported.) 234 606.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Sequence types) 216 583.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.35 (Supported by instantiating a generic that provides the sequence type and) 234 565.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(operations on the sequence type.) 234 554.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(String types \050mapping deviation\051) 216 531.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported as an untyped address.) 234 513.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Arrays) 216 490.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Fully supported as Ada array types.) 234 472.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Pointers) 216 449.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported as untyped addresses.) 234 431.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Object types \050mapping deviation\051) 216 408.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.3 (Supported as a tagged type wrapper to facilitate method dispatching and) 234 390.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.23 (inheritance.  The actual object pointer value is available as a component) 234 379.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(of the tagged type and the tagged type can be created from an object) 234 368.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.21 (pointer.  The wrapper is only used for subprogram dispatching, all other) 234 357.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(occurrences are explicit object pointers.) 234 346.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Exceptions \050mapping deviation\051) 216 323.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.52 (An Ada exception declaration and a record declaration \050to contain excep-) 234 305.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tion occurrence data\051 are generated.) 234 294.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(No exceptions are raised and no data is stored on method calls.) 234 277.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Interface declarations) 216 254.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Interfaces are mapped to Ada packages that contain all declarations as-) 234 236.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(sociated with the interface.) 234 225.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Attribute declarations) 216 202.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported as \322get\323 and \322set\323 subprograms with instance data.) 234 184.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Operation declarations) 216 161.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported as subprogram declarations.) 234 143.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "15" 15
+%%Page: "16" 16
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(PowerAda SOM Support) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-16) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(The \322oneway\323 keyword has no effect.) 216 629.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Parameter declarations \050mapping deviation\051) 198 606.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.25 (The maximum number of supported parameters \050including the target ob-) 216 588.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ject and environment parameters\051 is 13.) 216 577.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Varargs parameters are not supported.) 216 560.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Environment parameters are explicitly passed and must be checked by) 216 543.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the client.) 216 532.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Clients must explicitly deallocate storage for unbounded sequence out) 216 515.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(parameters, unbounded string out parameters, unbounded sequence re-) 216 504.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(turn values, unbounded string return values, and array return values.) 216 493.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Raises expr) 198 470.31 T
+(ession \050mapping deviation\051) 246.98 470.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(No exceptions are raised and no data is stored on method calls.) 216 452.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Context expr) 198 429.31 T
+(ession) 253.64 429.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not supported.) 216 411.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Implementation statements) 198 388.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Most modifiers are supported \050see below\051.  Passthru statements are not) 216 370.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(supported.  Instance variable declarations are supported.) 216 359.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Global types \050mapping deviation\051) 198 336.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Types declared in the global file scope but not nested in a module or in-) 216 318.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.57 (terface are not generated in the binding.  References to these global types) 216 307.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(can be affected using the \322typeprefix\323 modifier.) 216 296.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+-0.45 (SOM Compiler Modifiers) 72 261.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(The following is a summary of the compiler global modi\336ers and their status in) 198 261.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the PowerAda Ada95 Emitters:) 198 249.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(addpr) 198 225.31 T
+(e\336xes) 223.94 225.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not supported.) 216 207.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(addstar) 198 184.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not applicable.) 216 166.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "16" 16
+%%Page: "17" 17
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-17) 512 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(PowerAda SOM Support) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(comment = string) 216 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Causes comments to be left out of binding file.) 234 605.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(corba) 216 582.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Allows only CORBA-compliant IDL to be processed.) 234 564.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(csc) 216 541.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not applicable.) 234 523.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(emitappend) 216 500.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Causes new bindings to be appended to old bindings if) 234 482.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(present.) 234 471.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(noheader) 216 448.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not applicable.) 234 430.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(noint) 216 407.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Suppresses warnings about \322int\323 types in IDL.) 234 389.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(nolock) 216 366.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not applicable.) 234 348.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(nopp) 216 325.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not applicable.) 234 307.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(notc) 216 284.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not applicable.) 234 266.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(nouseshort) 216 243.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not applicable.) 234 225.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(pp = pr) 216 202.33 T
+(epr) 247.64 202.33 T
+(ocessor) 261.9 202.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(   Supported.  Selects a preprocessor) 216 178.33 T
+(.) 360.42 178.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(tcconsts) 216 154.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "17" 17
+%%Page: "18" 18
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(PowerAda SOM Support) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-18) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(Not supported.) 216 629.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(typepr) 198 606.31 T
+(e\336x = string) 226.15 606.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.43 (A new global modifier specifies a string to be prepended to references to) 216 588.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(global type declarations \050type declarations outside of object interfaces) 216 577.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.32 (and modules\051 in the Ada translation.  This prefix must be the name of an) 216 566.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Ada package, to be withed by the binding package, that contains the ap-) 216 555.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(propriate type declarations.) 216 544.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(This is a temporary workaround.) 216 527.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The following is summary of the implementation statement modi\336ers and their) 198 504.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(status in PowerAda Ada95 Emitters:) 198 492.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(callstyle = oidl) 198 468.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Fully supported.  Suppresses the environment and context parameters.) 216 450.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(classinit = pr) 198 427.31 T
+(ocedur) 252.97 427.31 T
+(e) 282.23 427.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not supported.) 216 409.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(dllname = \336lename) 198 386.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not supported.) 216 368.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(\336lestem = stem) 198 345.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Modifies the output filename.) 216 327.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(functionpr) 198 304.31 T
+(e\336x = pr) 243.38 304.31 T
+(e\336x) 278.9 304.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not supported.) 216 286.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(impctx) 198 263.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not supported.) 216 245.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(indir) 198 222.31 T
+(ect) 218.94 222.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not supported.) 216 204.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(majorversion=number) 198 181.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Constant is declared in binding.) 216 163.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "18" 18
+%%Page: "19" 19
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-19) 512 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(PowerAda SOM Support) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(metaclass = class) 216 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Specifies the metaclass for the class.) 234 605.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(method) 216 582.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.) 234 564.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(minorversion = number) 216 541.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Constant is declared in binding.) 234 523.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(namelookup) 216 500.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not supported.) 234 482.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(nodata) 216 459.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Suppresses generation of instance data for attribute.) 234 441.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(noget) 216 418.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.44 (Supported.  Generates method stub for attribute \322get\323 subprogram rather) 234 400.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(than automatically generating a full method.) 234 389.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(nooverride) 216 366.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Indicates method cannot be overridden in subclasses.) 234 348.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(noset) 216 325.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.33 (Supported.  Generates method stub for attribute \322set\323 subprogram rather) 234 307.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(than automatically generating a full method.) 234 296.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(offset) 216 273.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(   Supported.  Uses offset resolution for method lookup.) 234 255.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(override) 216 232.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Supported.  Generates a stub for redefining the indicated method.) 234 214.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(persistent) 216 191.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Not supported.) 234 173.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(pr) 216 150.33 T
+(ocedur) 225.82 150.33 T
+(e) 255.08 150.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "19" 19
+%%Page: "20" 20
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(Known Problems) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-20) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(Not supported.) 216 629.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(r) 198 606.31 T
+(eleaseorder: a, b, c, ...) 202.26 606.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.07 (Supported.  Specifies method ordering to preserve upwards compatibili-) 216 588.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ty.) 216 577.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 11 Q
+(Known Pr) 72 547.64 T
+(oblems) 120.39 547.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(This section summarizes the known problems with the generated bindings.) 198 547.64 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Self-referential Structs) 72 511.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Structs that include self-referential sequence type declarations do not correctly) 198 511.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.06 (generate a forward reference for the struct type.  There is no workaround for this.) 198 499.31 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Parameters) 72 463.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Homographs) 72 452.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Parameters whose type name includes a component that is a homograph of the) 198 463.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(subprogram name are not accepted by the Ada95 compiler) 198 451.31 T
+(.  This is a compiler) 431.28 451.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(problem.  Declare a local subtype to rename the type that is a homograph and) 198 439.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(have the parameter refer to the local subtype to workaround the problem.) 198 427.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Types declared in) 72 391.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(modules) 72 380.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(T) 198 391.31 T
+(ype declarations in modules that refer to declarations from interfaces nested) 203.41 391.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(within the module will not work because the nested interfaces are generated a) 198 379.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(separate child packages.  There is no workaround for this problem.) 198 367.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Demonstration of) 72 331.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Known Problems) 72 320.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(The following IDL speci\336cation demonstrates an example of each problem.) 198 331.31 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(//) 198 313.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(//) 198 303.98 T
+6 F
+(IDL specif) 214.2 303.98 T
+(ication to illustrate known problems in Ada95) 268.2 303.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(//) 198 293.98 T
+6 F
+(bindings.) 214.2 293.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(//) 198 283.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(module known_problems) 198 263.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+({) 198 253.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   interface first_interface) 198 233.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   {) 198 223.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(      typedef long homograph;) 198 213.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(      typedef long another_long;) 198 193.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   };) 198 183.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   //) 198 163.98 T
+6 F
+(Module with typedef that references type in nested) 230.4 163.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(   //) 198 153.98 T
+6 F
+(interface.) 230.4 153.98 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "20" 20
+%%Page: "21" 21
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+2 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(SOM, CORBA and IDL) 216 99.58 T
+0 F
+(17-21) 512 99.58 T
+540 113.98 90 113.98 2 L
+0.25 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+(Known Problems) 216 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+540 671.98 90 671.98 2 L
+N
+540 696.68 90 696.68 2 L
+2 H
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(   typedef first_interface::another_long yet_another_long;) 216 624 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   interface second_interface) 216 604 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   {) 216 594 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(     //) 216 574 T
+6 F
+(Methods with parameter whose type name is homograph) 259.2 574 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(     //) 216 564 T
+6 F
+(of method name.) 259.2 564 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(      void homograph\050in first_interface::homograph p1\051;) 216 544 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(      //) 216 514 T
+6 F
+(Structs with self-referential IDL sequence) 264.6 514 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(      //) 216 504 T
+6 F
+(declarations.) 264.6 504 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(      struct self_referential_struct) 216 484 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(      {) 216 474 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(         sequence <self_referential_struct> self;) 216 464 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(      };) 216 454 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(   };) 216 434 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(};) 216 414 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "21" 21
+%%Page: "22" 22
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(Known Problems) 198 685.15 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(17-22) 72 99.58 T
+2 F
+(SOM, CORBA and IDL) 198 99.58 T
+522 696.68 72 696.68 2 L
+2 H
+2 Z
+N
+522 113.98 72 113.98 2 L
+0.25 H
+N
+522 671.98 72 671.98 2 L
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "22" 22
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%PageOrder: Ascend
+%%Pages: 22
+%%DocumentFonts: Times-Bold
+%%+ Helvetica-Bold
+%%+ Times-Italic
+%%+ Times-Roman
+%%+ Helvetica
+%%+ Courier
+%%+ Courier-Oblique
+%%EOF

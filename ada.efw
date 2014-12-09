@@ -1,0 +1,403 @@
+:headerS
+/*------------------------------------------------------------------------*/
+/* ada.efw                                                                */
+/*                                                                        */
+/* This file is the template description file for the Ada Stub Emitter.   */
+/*                                                                        */
+/*                                                                        */
+/* Change Log                                                             */
+/* ------ ---                                                             */
+/* 20Dec94 swn Change CORBA type names. (d2189)                           */
+/* 15May95 gvc Don't use system.address anymore                           */
+/* 11May95 gvc Need enum rep specs and PRAGMA Preserve_Layout.  (d1137)   */
+/* 23Dec94 swn Fix to use classCScopedName for external references.       */
+/* 13Dec94 swn Add support for external references.                       */
+/*         swn Add support for anonymous array types.                     */
+/*         swn Change implementation of sequence types.                   */
+/*         swn Fix free_instance to free instance not classobj.           */
+/* 02Dec94 swn Add support for override functions and method functions.   */
+/* 22Nov94 swn Created.                                                   */
+/*                                                                        */
+/*------------------------------------------------------------------------*/
+sccs_version[] = "@(#) ada/runtime/som/ada.efw, ada, power95.3 1.10 12/21/95 09:46:26";
+
+:prologS
+
+-------------------------------------------------------------------------------
+-- Emitted on: <timeStamp>
+-- Emitted by: OC Systems SOM IDL to Ada95 Interface Stub Emitter.
+-------------------------------------------------------------------------------
+
+:epilogS
+
+
+:baseIncludesS
+WITH <externalAdaName>;
+:externalIncludesS
+WITH <externalAdaName>;
+:classSpecHeaderS
+WITH Corba;  USE Corba;
+WITH Corba.Object;
+WITH SOM;
+WITH System;
+
+PACKAGE <classAdaScopedName> IS
+
+?   <-- classComment>
+
+   TYPE Ref IS NEW <classLMPAdaScopedName>.Ref WITH NULL RECORD;
+
+   FUNCTION To_Ref (
+      som_object : IN SOM.SOMObjectPtr)
+      RETURN          Ref;
+
+   Major_Version : CONSTANT SOM.integer4 := <classMajorVersion>;
+   Minor_Version : CONSTANT SOM.integer4 := <classMinorVersion>;
+
+   FUNCTION New_Class (
+      Major_Version : IN SOM.integer4;
+      Minor_Version : IN SOM.integer4)
+      RETURN             SOM.SOMClassPtr;
+
+   FUNCTION New_Instance
+      RETURN Ref;
+
+   PROCEDURE Free_Instance(
+      Instance : IN OUT Ref);
+      
+:classSpecTrailerS
+
+END <classAdaScopedName>; 
+
+:basePrologS
+:baseS
+:baseEpilogS
+:metaS
+:constantPrologS
+:constantStringS
+
+   <constantAdaName>_literal : CONSTANT standard.string 
+                             := <constantAdaValueUnevaluated>;
+   <constantAdaName> : CONSTANT Corba.String 
+                     := <constantAdaName>_literal(<constantAdaName>_literal'first)'address;
+?     <-- constantComment>
+:constantS
+
+   <constantAdaName> : CONSTANT <constantAdaType> := <constantAdaValueUnevaluated>;
+?     <-- constantComment>
+:constantEpilogS
+:typedefPrologS
+:typedefS
+
+   SUBTYPE <typedefAdaDeclarator> IS <typedefAdaBaseType>;
+?     <-- typedefComment>
+:typedefArrayS
+
+   TYPE <typedefAdaDeclarator> IS ARRAY (<typedefArrayDimensions,...>) OF <typedefAdaBaseType>;
+?     <-- typedefComment>
+:typedefEpilogS
+:anonymousArrayS
+
+   TYPE <anonymousArrayName>_Array IS ARRAY (<anonymousArrayDimensions,...>) OF <anonymousArrayType>;
+?     <-- anonymousArrayComment>
+:structExceptionPrologS
+
+   <exceptionAdaName> : EXCEPTION;
+
+   TYPE <exceptionAdaName>_members IS 
+   --NEW Corba.IDL_exception_members WITH
+   RECORD
+:structPrologS
+
+   TYPE <structAdaName> IS
+   RECORD
+:structMemberS
+      <structMemberAdaName> : <structMemberAdaType>;
+?        <-- structMemberComment>
+:structMemberNullS
+      NULL;
+:structMemberArrayS
+      <structMemberAdaName> : <structMemberAdaType>_Array;
+?        <-- structMemberComment>
+:structEpilogS
+   END RECORD;
+   PRAGMA Preserve_Layout( <structAdaName> );
+?     <-- structComment>
+:structExceptionEpilogS
+   END RECORD;
+   PRAGMA Preserve_Layout( <exceptionAdaName>_members );
+
+-- FUNCTION get_members (
+--    x      : IN Ada.Exceptions.Exception_Occurrence)
+--    RETURN      <exceptionAdaName>_members;
+?     <-- structComment>
+:unionPrologS
+
+   TYPE <unionAdaName> (<unionAdaName>_Switch : <unionSwitchAdaType>) IS
+   RECORD
+      CASE <unionAdaName>_Switch IS
+:unionMemberS
+      WHEN <unionMemberCaseAdaNames|...> =>
+         <unionMemberAdaName> : <unionMemberAdaType>;
+:unionEpilogS
+      END CASE;
+   END RECORD;
+   PRAGMA Preserve_Layout( <unionAdaName> );
+?     <-- unionComment>
+:sequenceBoundedS
+
+   PACKAGE <sequencePackageAdaName> IS 
+      NEW Corba.Sequences.Bounded(<sequenceComponentAdaType>, <sequenceMax>);
+
+?     <-- sequenceComment>
+:sequenceUnboundedS
+
+   PACKAGE <sequencePackageAdaName> IS 
+      NEW Corba.Sequences.Unbounded(<sequenceComponentAdaType>);
+
+?     <-- sequenceComment>
+:enumPrologS
+:enumS
+
+   TYPE <enumAdaName> IS (<enumAdaNames, ...>);
+   FOR <enumAdaName> USE (<enumAdaRange> );
+?     <-- enumComment>
+:enumEpilogS
+:methodFunctionS
+
+   FUNCTION <methodAdaName> (
+      <methodAdaParamList;...>)
+      RETURN <methodAdaResultType>;
+?     <-- methodComment>
+:methodProcedureS
+
+   PROCEDURE <methodAdaName> (
+      <methodAdaParamList;...>);
+?     <-- methodComment>
+:moduleSpecHeaderS
+WITH Corba;  USE Corba;
+WITH Corba.Object;
+WITH SOM;
+WITH System;
+
+PACKAGE <moduleName> IS
+
+?   <-- moduleComment>
+:moduleSpecTrailerS
+
+END <moduleAdaScopedName>; 
+
+:classBodyHeaderS
+WITH SOMObject;
+WITH SOMClass;
+
+PACKAGE BODY <classAdaScopedName> IS
+
+   <-- classComment>
+
+   FUNCTION "="(l,r : IN SOM.address) RETURN boolean RENAMES SOM."=";
+
+:classBodyDataHeaderS
+ 
+   -- Class data structure.
+   TYPE classData IS
+   RECORD
+      classObject : SOM.SOMAnyPtr;
+:classBodyDataMethodS
+      <methodAdaName> : SOM.somMToken;
+:classBodyDataTrailerS
+   END RECORD;
+   PRAGMA Preserve_Layout( classData );
+
+   <classAdaName>ClassData : classData;
+   FOR <classAdaName>ClassData USE AT standard.system.label("<classCScopedName>ClassData");
+
+:classBodyCClassDataS
+   
+   -- Auxilary class data structure.
+   TYPE CClassData IS
+   RECORD
+      parentMtab        : SOM.somMethodTabs;
+      instanceDataToken : SOM.somDToken;
+   END RECORD;
+   PRAGMA Preserve_Layout( CClassData );
+
+   <classAdaName>CClassData : CClassData;
+   FOR <classAdaName>CClassData USE AT standard.system.label("<classCScopedName>CClassData");
+   -- Documentation indicates that this is not needed.
+
+:toRefS
+
+   FUNCTION To_Ref (
+      som_object : IN SOM.SOMObjectPtr)
+      RETURN          Ref
+   IS
+   BEGIN
+      IF 
+         SOMObject.somIsA(
+            SOMObject.Ref'(som_object => som_object), 
+            <classAdaName>ClassData.classObject) 
+      THEN
+         RETURN Ref'(som_object => som_object);
+      ELSE
+         RAISE program_error;
+      END IF;
+   END To_Ref;
+
+
+:newClassS
+
+   FUNCTION New_Class (
+      Major_Version : IN SOM.integer4;
+      Minor_Version : IN SOM.integer4)
+      RETURN             SOM.SOMClassPtr
+   IS
+      FUNCTION <classAdaName>NewClass (
+         Major_Version : IN SOM.integer4;
+         Minor_Version : IN SOM.integer4)
+         RETURN             SOM.SOMClassPtr;
+      PRAGMA interface (C, <classAdaName>NewClass);
+      PRAGMA interface_information (<classAdaName>NewClass, ".<classCScopedName>NewClass");
+   BEGIN
+      RETURN <className>NewClass(major_version, minor_version);
+   END New_Class;
+:newInstanceS
+
+   FUNCTION New_Instance
+      RETURN Ref
+   IS
+      Result : Ref;
+      Dummy  : SOM.SOMClassPtr;
+   BEGIN
+      IF <classAdaName>ClassData.classObject = SOM.null_address THEN
+         Dummy := New_Class(Major_Version, Minor_Version);
+      END IF;
+      Result.som_object := 
+         SOMClass.somNew(
+            SOMClass.To_Ref(<classAdaName>ClassData.classObject));
+      RETURN Result;
+   END New_Instance;
+
+:freeInstanceS
+
+   PROCEDURE Free_Instance(
+      Instance : IN OUT Ref)
+   IS
+   BEGIN
+      SOMObject.somFree(SOMObject.To_Ref(Instance.som_object));
+   END Free_Instance;
+:methodsPrologS
+
+:methodBodyFunctionS
+
+   FUNCTION <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+      RETURN <methodAdaResultType>
+   IS
+?     <-- methodComment>
+      FUNCTION <methodCName>(
+         <methodHiddenAdaParamList; ...>;
+         subprogram_value : IN SOM.somMToken)
+         RETURN <methodAdaResultType>; 
+      PRAGMA interface (assembly, <methodCName>);
+      PRAGMA interface_information (<methodCName>, "<methodXcallName>");
+      <methodHiddenResultReference> : ALIASED <methodAdaResultType>;
+   BEGIN
+      IF NOT SOM.somIsObj(Self.som_object) THEN RAISE program_error; END IF;
+      <methodHiddenResultReference> :=
+         <methodCName> (
+            <methodHiddenAdaParamNameList,...>,
+            <classAdaName>ClassData.<methodAdaName>);
+      RETURN <methodHiddenResultReference>;
+   END <methodAdaName>; 
+:methodBodyFunctionProcedureS
+
+   FUNCTION <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+      RETURN <methodAdaResultType>
+   IS
+?     <-- methodComment>
+      PROCEDURE <methodCName>(
+         <methodHiddenAdaParamList; ...>;
+         subprogram_value : IN SOM.somMToken);
+      PRAGMA interface (assembly, <methodCName>);
+      PRAGMA interface_information (<methodCName>, "<methodXcallName>");
+      <methodHiddenResultReference> : ALIASED <methodAdaResultType>;
+   BEGIN
+      IF NOT SOM.somIsObj(Self.som_object) THEN RAISE program_error; END IF;
+      <methodCName> (
+         <methodHiddenAdaParamNameList,...>,
+         <classAdaName>ClassData.<methodAdaName>);
+      RETURN <methodHiddenResultReference>;
+   END <methodAdaName>; 
+:methodBodyProcedureS
+
+   PROCEDURE <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+   IS
+?     <-- methodComment>
+      PROCEDURE <methodCName>(
+         <methodHiddenAdaParamList; ...>;
+         subprogram_value : IN SOM.somMToken);
+      PRAGMA interface (assembly, <methodCName>);
+      PRAGMA interface_information (<methodCName>, "<methodXcallName>");
+
+   BEGIN
+      IF NOT SOM.somIsObj(Self.som_object) THEN RAISE program_error; END IF;
+      <methodCName> (
+         <methodHiddenAdaParamNameList,...>,
+         <classAdaName>ClassData.<methodAdaName>);
+   END <methodAdaName>;
+:methodBodyProcedureFunctionS
+
+   PROCEDURE <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+   IS
+?     <-- methodComment>
+      FUNCTION <methodCName>(
+         <methodHiddenAdaParamList; ...>;
+         subprogram_value : IN SOM.somMToken)
+         RETURN <methodHiddenResultType>; 
+      PRAGMA interface (assembly, <methodCName>);
+      PRAGMA interface_information (<methodCName>, "<methodXcallName>");
+
+   BEGIN
+      IF NOT SOM.somIsObj(Self.som_object) THEN RAISE program_error; END IF;
+      <methodHiddenResultReference> :=
+         <methodCName> (
+            <methodHiddenAdaParamNameList,...>,
+            <classAdaName>ClassData.<methodAdaName>);
+   END <methodAdaName>;
+:overrideBodyFunctionS
+
+   FUNCTION <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+      RETURN <methodAdaResultType>
+   IS
+?     <-- methodComment>
+   BEGIN
+      IF NOT SOM.somIsObj(Self.som_object) THEN RAISE program_error; END IF;
+      RETURN 
+         <methodOriginalClassName>.<methodAdaName> (
+            <methodVisibleAdaParamNameList,...>);
+   END <methodAdaName>;
+:overrideBodyProcedureS
+
+   PROCEDURE <methodAdaName> (
+      <methodVisibleAdaParamList; ...>)
+   IS
+?     <-- methodComment>
+   BEGIN
+      IF NOT SOM.somIsObj(Self.som_object) THEN RAISE program_error; END IF;
+      <methodOriginalClassName>.<methodAdaName> (
+         <methodVisibleAdaParamNameList,...>);
+   END <methodAdaName>;
+:methodsEpilogS
+:classBodyTrailerS
+
+END <classAdaScopedName>; 
+
+
+
+
+
